@@ -54,7 +54,7 @@ Modify:
 """
 def createDataSet():
 	#数据集
-	dataSet = [[1, 1, 'maybe'],
+	dataSet = [[1, 1, 'yes'],
 			[1, 1, 'yes'],
 			[1, 0, 'no'],
 			[0, 1, 'no'],
@@ -98,7 +98,7 @@ def splitDataSet(dataSet, axis, value):
 Parameters:
 	dataSet - 数据集
 Returns:
-	bestFeature - 最好划分数据集的特征
+	bestFeature - 最好划分数据集的特征的索引值
 Author:
 	Jack Cui
 Modify:
@@ -111,12 +111,40 @@ def chooseBestFeatureToSplit(dataSet):
 	baseEntropy = calcShannonEnt(dataSet)
 	#信息增益
 	bestInfoGain = 0.0
-	#划分特征
+	#划分特征的索引值
 	bestFeature = -1
 	#遍历所有特征
 	for i in range(numFeatures):
-	
+		#获取dataSet的第i个所有特征,当i=0时,featList=[1,1,1,0,0],当i=1时,featList=[1,1,0,1,1]
+		featList = [example[i] for example in dataSet]
+		#创建set集合{},元素不可重复
+		uniqueVals = set(featList)
+		#新的香农熵
+		newEntropy = 0.0
+		#计算新的香农熵
+		for value in uniqueVals:
+			#subDataSet划分后的子集
+			subDataSet = splitDataSet(dataSet, i, value)
+			#计算概率
+			prob = len(subDataSet) / float(len(dataSet))
+			#根据公式计算香农熵
+			newEntropy += prob * calcShannonEnt(subDataSet)
+		#信息增益
+		infoGain = baseEntropy - newEntropy
+		#计算最好的信息增益
+		if (infoGain > bestFeature):
+			#更新最好的信息增益
+			bestInfoGain = infoGain
+			#更新最好划分数据集的特征的索引值
+			bestFeature = i
+	#返回最好划分数据集的特征的索引值
+	return bestFeature
+
+
+
 
 if __name__ == '__main__':
-	myDat, features = createDataSet()
-	chooseBestFeatureToSplit(myDat)
+	dataSet, features = createDataSet()
+	print(dataSet)
+	bestFeature = chooseBestFeatureToSplit(dataSet)
+	print(bestFeature)
