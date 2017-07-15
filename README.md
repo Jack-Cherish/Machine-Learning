@@ -5,6 +5,8 @@
 
 ## 第二章：kNN（k-邻域算法）
 
+  [博客详细讲解](http://blog.csdn.net/c406495762/article/details/75172850 "悬停显示")
+
 * [1.简单k-NN](https://github.com/Jack-Cherish/Machine-Learning/tree/master/kNN/1.%E7%AE%80%E5%8D%95k-NN "悬停显示")
 
 * [2.海伦约会](https://github.com/Jack-Cherish/Machine-Learning/tree/master/kNN/2.%E6%B5%B7%E4%BC%A6%E7%BA%A6%E4%BC%9A "悬停显示")
