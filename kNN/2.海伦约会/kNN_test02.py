@@ -107,7 +107,7 @@ Modify:
 def showdatas(datingDataMat, datingLabels):
 	#设置汉字格式
 	font = FontProperties(fname=r"c:\windows\fonts\simsun.ttc", size=14)
-	#将fig画布分隔成1行1列,不共享x轴和y轴,fig画布的大小为(10,5)
+	#将fig画布分隔成1行1列,不共享x轴和y轴,fig画布的大小为(13,8)
 	#当nrow=2,nclos=2时,代表fig画布被分为四个区域,axs[0][0]表示第一行第一个区域
 	fig, axs = plt.subplots(nrows=2, ncols=2,sharex=False, sharey=False, figsize=(13,8))
 
@@ -125,7 +125,7 @@ def showdatas(datingDataMat, datingLabels):
 	#设置标题,x轴label,y轴label
 	axs0_title_text = axs[0][0].set_title(u'每年获得的飞行常客里程数与玩视频游戏所消耗时间占比',FontProperties=font)
 	axs0_xlabel_text = axs[0][0].set_xlabel(u'每年获得的飞行常客里程数',FontProperties=font)
-	axs0_ylabel_text = axs[0][0].set_ylabel(u'玩视频游戏所消耗时间占',FontProperties=font)
+	axs0_ylabel_text = axs[0][0].set_ylabel(u'玩视频游戏所消耗时间占比',FontProperties=font)
 	plt.setp(axs0_title_text, size=9, weight='bold', color='red')  
 	plt.setp(axs0_xlabel_text, size=7, weight='bold', color='black')  
 	plt.setp(axs0_ylabel_text, size=7, weight='bold', color='black') 

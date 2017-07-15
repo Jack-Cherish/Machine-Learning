@@ -2,15 +2,38 @@
 import numpy as np
 import operator
 
-#创建数据集
+"""
+函数说明:创建数据集
+
+Parameters:
+	无
+Returns:
+	group - 数据集
+	labels - 分类标签
+Modify:
+	2017-07-13
+"""
 def createDataSet():
 	#四组二维特征
-	group = np.array([[1.0,1.1],[1.0,1.0],[0,0],[0,0.1]])
+	group = np.array([[1,101],[5,89],[108,5],[115,8]])
 	#四组特征的标签
-	labels = ['A','A','B','B']
+	labels = ['爱情片','爱情片','动作片','动作片']
 	return group, labels
 
-#kNN算法
+"""
+函数说明:kNN算法,分类器
+
+Parameters:
+	inX - 用于分类的数据(测试集)
+	dataSet - 用于训练的数据(训练集)
+	labes - 分类标签
+	k - kNN算法参数,选择距离最小的k个点
+Returns:
+	sortedClassCount[0][0] - 分类结果
+
+Modify:
+	2017-07-13
+"""
 def classify0(inX, dataSet, labels, k):
 	#numpy函数shape[0]返回dataSet的行数
 	dataSetSize = dataSet.shape[0]
@@ -44,7 +67,7 @@ if __name__ == '__main__':
 	#创建数据集
 	group, labels = createDataSet()
 	#测试集
-	test = [1,1]
+	test = [101,20]
 	#kNN分类
 	test_class = classify0(test, group, labels, 3)
 	#打印分类结果
