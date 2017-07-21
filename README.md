@@ -15,6 +15,10 @@
 
 ## 第三章：Decision Tree（决策树）
 
+  [博客详细讲解](http://blog.csdn.net/c406495762/article/details/75663451 "悬停显示")
+
+
+
 
 
 
