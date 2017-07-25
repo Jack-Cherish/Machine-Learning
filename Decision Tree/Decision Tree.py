@@ -155,6 +155,7 @@ def majorityCnt(classList):
 Parameters:
 	dataSet - 训练数据集
 	labels - 分类属性标签
+	featLabels - 存储选择的最优特征标签
 Returns:
 	myTree - 决策树
 Author:
@@ -164,7 +165,7 @@ Blog:
 Modify:
 	2017-07-24
 """
-def createTree(dataSet, labels):
+def createTree(dataSet, labels, featLabels):
 	classList = [example[-1] for example in dataSet]			#取分类标签(是否放贷:yes or no)
 	if classList.count(classList[0]) == len(classList):			#如果类别完全相同则停止继续划分
 		return classList[0]
@@ -172,12 +173,13 @@ def createTree(dataSet, labels):
 		return majorityCnt(classList)
 	bestFeat = chooseBestFeatureToSplit(dataSet)				#选择最优特征
 	bestFeatLabel = labels[bestFeat]							#最优特征的标签
+	featLabels.append(bestFeatLabel)
 	myTree = {bestFeatLabel:{}}									#根据最优特征的标签生成树
 	del(labels[bestFeat])										#删除已经使用特征标签
 	featValues = [example[bestFeat] for example in dataSet]		#得到训练集中所有最优特征的属性值
 	uniqueVals = set(featValues)								#去掉重复的属性值
-	for value in uniqueVals:									#遍历特征，创建决策树。								
-		myTree[bestFeatLabel][value] = createTree(splitDataSet(dataSet, bestFeat, value), labels)
+	for value in uniqueVals:									#遍历特征，创建决策树。						
+		myTree[bestFeatLabel][value] = createTree(splitDataSet(dataSet, bestFeat, value), labels, featLabels)
 	return myTree
 
 """
@@ -339,7 +341,7 @@ def createPlot(inTree):
 
 Parameters:
 	inputTree - 已经生成的决策树
-	featLables - 分类标签
+	featLables - 决策树结点标签，也就是分类标签
 	testVec - 测试数据列表
 Returns:
 	classLabel - 分类结果
@@ -348,21 +350,21 @@ Author:
 Blog:
 	http://blog.csdn.net/c406495762
 Modify:
-	2017-07-24
+	2017-07-25
 """ 
 def classify(inputTree, featLables, testVec):
 	firstStr = next(iter(inputTree))														#获取决策树结点
 	secondDict = inputTree[firstStr]														#下一个字典
-	featIndex = featLables.index(firstStr)	
-	pritn(featLables)												
-	# for key in secondDict.keys():
-	# 	if testVec[featIndex] == key:
-	# 		if type(secondDict[key]).__name__ = 'dict':
-	# 			classLabel = classify(secondDict[key], featLables, testVec)
-	# 		else: classLabel = secondDict[key]
-	# return classLabel
+	featIndex = featLables.index(firstStr)												
+	for key in secondDict.keys():
+		if testVec[featIndex] == key:
+			if type(secondDict[key]).__name__ == 'dict':
+				classLabel = classify(secondDict[key], featLables, testVec)
+			else: classLabel = secondDict[key]
+	return classLabel
 
 if __name__ == '__main__':
 	dataSet, labels = createDataSet()
-	myTree = createTree(dataSet, labels)
-	createPlot(myTree)
+	featLabels = []
+	myTree = createTree(dataSet, labels, featLabels)
+	print(classify(myTree, featLabels, [0,1]))
