@@ -3,6 +3,7 @@ from matplotlib.font_manager import FontProperties
 import matplotlib.pyplot as plt
 from math import log
 import operator
+import pickle
 
 """
 函数说明:计算给定数据集的经验熵(香农熵)
@@ -163,7 +164,7 @@ Author:
 Blog:
 	http://blog.csdn.net/c406495762
 Modify:
-	2017-07-24
+	2017-07-25
 """
 def createTree(dataSet, labels, featLabels):
 	classList = [example[-1] for example in dataSet]			#取分类标签(是否放贷:yes or no)
@@ -341,8 +342,8 @@ def createPlot(inTree):
 
 Parameters:
 	inputTree - 已经生成的决策树
-	featLables - 决策树结点标签，也就是分类标签
-	testVec - 测试数据列表
+	featLabels - 存储选择的最优特征标签
+	testVec - 测试数据列表，顺序对应最优特征标签
 Returns:
 	classLabel - 分类结果
 Author:
@@ -352,19 +353,62 @@ Blog:
 Modify:
 	2017-07-25
 """ 
-def classify(inputTree, featLables, testVec):
+def classify(inputTree, featLabels, testVec):
 	firstStr = next(iter(inputTree))														#获取决策树结点
 	secondDict = inputTree[firstStr]														#下一个字典
-	featIndex = featLables.index(firstStr)												
+	featIndex = featLabels.index(firstStr)												
 	for key in secondDict.keys():
 		if testVec[featIndex] == key:
 			if type(secondDict[key]).__name__ == 'dict':
-				classLabel = classify(secondDict[key], featLables, testVec)
+				classLabel = classify(secondDict[key], featLabels, testVec)
 			else: classLabel = secondDict[key]
 	return classLabel
+
+"""
+函数说明:存储决策树
+
+Parameters:
+	inputTree - 已经生成的决策树
+	filename - 决策树的存储文件名
+Returns:
+	无
+Author:
+	Jack Cui
+Blog:
+	http://blog.csdn.net/c406495762
+Modify:
+	2017-07-25
+""" 
+def storeTree(inputTree, filename):
+	with open(filename, 'wb') as fw:
+		pickle.dump(inputTree, fw)
+
+"""
+函数说明:读取决策树
+
+Parameters:
+	filename - 决策树的存储文件名
+Returns:
+	pickle.load(fr) - 决策树字典
+Author:
+	Jack Cui
+Blog:
+	http://blog.csdn.net/c406495762
+Modify:
+	2017-07-25
+""" 
+def grabTree(filename):
+	fr = open(filename, 'rb')
+	return pickle.load(fr)
+
 
 if __name__ == '__main__':
 	dataSet, labels = createDataSet()
 	featLabels = []
 	myTree = createTree(dataSet, labels, featLabels)
-	print(classify(myTree, featLabels, [0,1]))
+	testVec = [0,1]										#测试数据
+	result = classify(myTree, featLabels, testVec)
+	if result == 'yes':
+		print('放贷')
+	if result == 'no':
+		print('不放贷')
