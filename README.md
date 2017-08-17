@@ -31,10 +31,16 @@
 * [1.贷款预测](https://github.com/Jack-Cherish/Machine-Learning/blob/master/Decision%20Tree/Decision%20Tree.py "悬停显示")
 
 * [2.隐形眼镜](https://github.com/Jack-Cherish/Machine-Learning/blob/master/Decision%20Tree/Sklearn-Decision%20Tree.py "悬停显示")
+
+## 第四章：Navie Bayes（朴素贝叶斯）
+
+### 博客
   
+  [Python3《机器学习实战》学习笔记（四）：朴素贝叶斯基础篇之言论过滤器](http://blog.csdn.net/c406495762/article/details/77341116 "悬停显示")
   
+### 代码
   
-  
+* [1.言论过滤器](https://github.com/Jack-Cherish/Machine-Learning/blob/master/Naive%20Bayes/bayes.py "悬停显示")
   
 
 
