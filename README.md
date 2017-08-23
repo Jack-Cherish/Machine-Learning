@@ -2,7 +2,8 @@
 * 贵有恒，何必三更起五更睡；最无益，只怕一日暴十寒。<br>
 * [我的博客](http://blog.csdn.net/c406495762 "悬停显示")<br>
 * 机器学习实战（详细代码注释+训练数据集），持续更新中！<br>
-* 欢迎关注我的[机器学习博客专栏](http://blog.csdn.net/column/details/16415.html "悬停显示")<br>
+* 欢迎关注我的CSDN[机器学习博客专栏](http://blog.csdn.net/column/details/16415.html "悬停显示")<br>
+* 欢迎关注我的知乎[机器学习博客专栏](https://zhuanlan.zhihu.com/ml-jack "悬停显示")<br>
 
 ## 第二章：kNN（k-邻域算法）
 
