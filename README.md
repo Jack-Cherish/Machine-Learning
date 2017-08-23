@@ -38,9 +38,16 @@
   
   [Python3《机器学习实战》学习笔记（四）：朴素贝叶斯基础篇之言论过滤器](http://blog.csdn.net/c406495762/article/details/77341116 "悬停显示")
   
+  [Python3《机器学习实战》学习笔记（五）：朴素贝叶斯实战篇之新浪新闻分类](http://blog.csdn.net/c406495762/article/details/77500679 "悬停显示")
+  
+  
 ### 代码
   
 * [1.言论过滤器](https://github.com/Jack-Cherish/Machine-Learning/blob/master/Naive%20Bayes/bayes.py "悬停显示")
+
+* [2.垃圾邮件过滤器](https://github.com/Jack-Cherish/Machine-Learning/blob/master/Naive%20Bayes/bayes-modify.py "悬停显示")
+
+* [3.新浪新闻分类器](https://github.com/Jack-Cherish/Machine-Learning/blob/master/Naive%20Bayes/nbc.py "悬停显示")
   
 
 
