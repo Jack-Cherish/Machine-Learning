@@ -69,12 +69,13 @@
 
 ### CSDN
 
-  更新中，敬请关注！
+  [Python3《机器学习实战》学习笔记（六）：Logistic回归基础篇之梯度上升算法](http://blog.csdn.net/c406495762/article/details/77723333 "悬停显示")
 
 ### 知乎
 
-  更新中，敬请关注！
+  [Python3《机器学习实战》学习笔记（六）：Logistic回归基础篇之梯度上升算法](https://zhuanlan.zhihu.com/p/28922957 "悬停显示")
   
 ### 代码
 
-  更新中，敬请关注！
+* [1.Logistic基础训练](https://github.com/Jack-Cherish/Machine-Learning/blob/master/Logistic/LogRegres.py "悬停显示")
+  
