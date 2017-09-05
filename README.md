@@ -7,6 +7,10 @@
 
 ## 第二章：kNN（k-邻域算法）
 
+|  文章名  |    CSDN    |    知乎    | 
+| :------: | :--------: | :--------: |
+| Python3《机器学习实战》学习笔记(一)：k-近邻算法(史诗级干货长文) | [CSDN](http://blog.csdn.net/c406495762/article/details/75172850 "悬停显示") | [CSDN](https://zhuanlan.zhihu.com/p/28656126 "悬停显示") |
+
 ### CSDN
 
   [Python3《机器学习实战》学习笔记(一)：k-近邻算法(史诗级干货长文)](http://blog.csdn.net/c406495762/article/details/75172850 "悬停显示")
@@ -70,12 +74,17 @@
 ### CSDN
 
   [Python3《机器学习实战》学习笔记（六）：Logistic回归基础篇之梯度上升算法](http://blog.csdn.net/c406495762/article/details/77723333 "悬停显示")
+  [Python3《机器学习实战》学习笔记（七）：Logistic回归实战篇之预测病马死亡率](http://blog.csdn.net/c406495762/article/details/77851973 "悬停显示")
 
 ### 知乎
 
   [Python3《机器学习实战》学习笔记（六）：Logistic回归基础篇之梯度上升算法](https://zhuanlan.zhihu.com/p/28922957 "悬停显示")
+  [Python3《机器学习实战》学习笔记（七）：Logistic回归实战篇之预测病马死亡率](https://zhuanlan.zhihu.com/p/29073560 "悬停显示")
   
 ### 代码
 
 * [1.Logistic基础训练](https://github.com/Jack-Cherish/Machine-Learning/blob/master/Logistic/LogRegres.py "悬停显示")
-  
+
+* [2.改进的随机梯度上升算法](https://github.com/Jack-Cherish/Machine-Learning/blob/master/Logistic/LogRegres-gj.py "悬停显示")
+
+* [3.病马死亡率预测](https://github.com/Jack-Cherish/Machine-Learning/blob/master/Logistic/colicLogRegres.py "悬停显示")
