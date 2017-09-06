@@ -146,6 +146,7 @@ def words_dict(all_words_list, deleteN, stopwords_set = set()):
 		#如果这个词不是数字，并且不是指定的结束语，并且单词长度大于1小于5，那么这个词就可以作为特征词
 		if not all_words_list[t].isdigit() and all_words_list[t] not in stopwords_set and 1 < len(all_words_list[t]) < 5:
 			feature_words.append(all_words_list[t])
+		n += 1
 	return feature_words
 
 """
