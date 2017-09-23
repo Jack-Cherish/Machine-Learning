@@ -1,63 +1,78 @@
 # Machine-Learning
-* ¹óÓĞºã£¬ºÎ±ØÈı¸üÆğÎå¸üË¯£»×îÎŞÒæ£¬Ö»ÅÂÒ»ÈÕ±©Ê®º®¡£<br>
-* [ÎÒµÄ²©¿Í](http://blog.csdn.net/c406495762 "ĞüÍ£ÏÔÊ¾")<br>
-* »úÆ÷Ñ§Ï°ÊµÕ½£¨ÏêÏ¸´úÂë×¢ÊÍ+ÑµÁ·Êı¾İ¼¯£©£¬³ÖĞø¸üĞÂÖĞ£¡<br>
-* »¶Ó­¹Ø×¢ÎÒµÄ[[CSDN²©¿Í×¨À¸](http://blog.csdn.net/column/details/16415.html "ĞüÍ£ÏÔÊ¾")]<br>
-* »¶Ó­¹Ø×¢ÎÒµÄ[[Öªºõ×¨À¸](https://zhuanlan.zhihu.com/ml-jack "ĞüÍ£ÏÔÊ¾")]<br>
+* è´µæœ‰æ’ï¼Œä½•å¿…ä¸‰æ›´èµ·äº”æ›´ç¡ï¼›æœ€æ— ç›Šï¼Œåªæ€•ä¸€æ—¥æš´åå¯’ã€‚<br>
+* [æˆ‘çš„åšå®¢](http://blog.csdn.net/c406495762 "æ‚¬åœæ˜¾ç¤º")<br>
+* æœºå™¨å­¦ä¹ å®æˆ˜ï¼ˆè¯¦ç»†ä»£ç æ³¨é‡Š+è®­ç»ƒæ•°æ®é›†ï¼‰ï¼ŒæŒç»­æ›´æ–°ä¸­ï¼<br>
+* æ¬¢è¿å…³æ³¨æˆ‘çš„[[CSDNåšå®¢ä¸“æ ](http://blog.csdn.net/column/details/16415.html "æ‚¬åœæ˜¾ç¤º")]<br>
+* æ¬¢è¿å…³æ³¨æˆ‘çš„[[çŸ¥ä¹ä¸“æ ](https://zhuanlan.zhihu.com/ml-jack "æ‚¬åœæ˜¾ç¤º")]<br>
 
-## µÚ¶şÕÂ£ºkNN£¨k-ÁÚÓòËã·¨£©
+## ç¬¬äºŒç« ï¼škNNï¼ˆk-é‚»åŸŸç®—æ³•ï¼‰
 
-|   ÎÄÕÂ   |    CSDN    |    Öªºõ    | 
+|   æ–‡ç«    |    CSDN    |    çŸ¥ä¹    | 
 | :------  | :--------: | :--------: |
-| Python3¡¶»úÆ÷Ñ§Ï°ÊµÕ½¡·Ñ§Ï°±Ê¼Ç(Ò»)£ºk-½üÁÚËã·¨(Ê·Ê«¼¶¸É»õ³¤ÎÄ) | [CSDN](http://blog.csdn.net/c406495762/article/details/75172850 "ĞüÍ£ÏÔÊ¾") | [Öªºõ](https://zhuanlan.zhihu.com/p/28656126 "ĞüÍ£ÏÔÊ¾") |
+| Python3ã€Šæœºå™¨å­¦ä¹ å®æˆ˜ã€‹å­¦ä¹ ç¬”è®°(ä¸€)ï¼šk-è¿‘é‚»ç®—æ³•(å²è¯—çº§å¹²è´§é•¿æ–‡) | [CSDN](http://blog.csdn.net/c406495762/article/details/75172850 "æ‚¬åœæ˜¾ç¤º") | [çŸ¥ä¹](https://zhuanlan.zhihu.com/p/28656126 "æ‚¬åœæ˜¾ç¤º") |
 
-### ´úÂë
+### ä»£ç 
 
-* [1.¼òµ¥k-NN](https://github.com/Jack-Cherish/Machine-Learning/tree/master/kNN/1.%E7%AE%80%E5%8D%95k-NN "ĞüÍ£ÏÔÊ¾")
+* [1.ç®€å•k-NN](https://github.com/Jack-Cherish/Machine-Learning/tree/master/kNN/1.%E7%AE%80%E5%8D%95k-NN "æ‚¬åœæ˜¾ç¤º")
 
-* [2.º£Â×Ô¼»á](https://github.com/Jack-Cherish/Machine-Learning/tree/master/kNN/2.%E6%B5%B7%E4%BC%A6%E7%BA%A6%E4%BC%9A "ĞüÍ£ÏÔÊ¾")
+* [2.æµ·ä¼¦çº¦ä¼š](https://github.com/Jack-Cherish/Machine-Learning/tree/master/kNN/2.%E6%B5%B7%E4%BC%A6%E7%BA%A6%E4%BC%9A "æ‚¬åœæ˜¾ç¤º")
 
-* [3.Êı×ÖÊ¶±ğ](https://github.com/Jack-Cherish/Machine-Learning/tree/master/kNN/3.%E6%95%B0%E5%AD%97%E8%AF%86%E5%88%AB "ĞüÍ£ÏÔÊ¾")
+* [3.æ•°å­—è¯†åˆ«](https://github.com/Jack-Cherish/Machine-Learning/tree/master/kNN/3.%E6%95%B0%E5%AD%97%E8%AF%86%E5%88%AB "æ‚¬åœæ˜¾ç¤º")
 
-## µÚÈıÕÂ£ºDecision Tree£¨¾ö²ßÊ÷£©
+## ç¬¬ä¸‰ç« ï¼šDecision Treeï¼ˆå†³ç­–æ ‘ï¼‰
 
-|   ÎÄÕÂ   |    CSDN    |    Öªºõ    | 
+|   æ–‡ç«    |    CSDN    |    çŸ¥ä¹    | 
 | :------  | :--------: | :--------: |
-| Python3¡¶»úÆ÷Ñ§Ï°ÊµÕ½¡·Ñ§Ï°±Ê¼Ç(¶ş)£º¾ö²ßÊ÷»ù´¡ÆªÖ®ÈÃÎÒÃÇ´ÓÏàÇ×ËµÆğ | [CSDN](http://blog.csdn.net/c406495762/article/details/75663451 "ĞüÍ£ÏÔÊ¾") | [Öªºõ](https://zhuanlan.zhihu.com/p/28688281 "ĞüÍ£ÏÔÊ¾") |
-| Python3¡¶»úÆ÷Ñ§Ï°ÊµÕ½¡·Ñ§Ï°±Ê¼Ç(Èı)£º¾ö²ßÊ÷ÊµÕ½ÆªÖ®Îª×Ô¼ºÅä¸öÒşĞÎÑÛ¾µ | [CSDN](http://blog.csdn.net/c406495762/article/details/76262487 "ĞüÍ£ÏÔÊ¾") | [Öªºõ](https://zhuanlan.zhihu.com/p/28714382 "ĞüÍ£ÏÔÊ¾") |
+| Python3ã€Šæœºå™¨å­¦ä¹ å®æˆ˜ã€‹å­¦ä¹ ç¬”è®°(äºŒ)ï¼šå†³ç­–æ ‘åŸºç¡€ç¯‡ä¹‹è®©æˆ‘ä»¬ä»ç›¸äº²è¯´èµ· | [CSDN](http://blog.csdn.net/c406495762/article/details/75663451 "æ‚¬åœæ˜¾ç¤º") | [çŸ¥ä¹](https://zhuanlan.zhihu.com/p/28688281 "æ‚¬åœæ˜¾ç¤º") |
+| Python3ã€Šæœºå™¨å­¦ä¹ å®æˆ˜ã€‹å­¦ä¹ ç¬”è®°(ä¸‰)ï¼šå†³ç­–æ ‘å®æˆ˜ç¯‡ä¹‹ä¸ºè‡ªå·±é…ä¸ªéšå½¢çœ¼é•œ | [CSDN](http://blog.csdn.net/c406495762/article/details/76262487 "æ‚¬åœæ˜¾ç¤º") | [çŸ¥ä¹](https://zhuanlan.zhihu.com/p/28714382 "æ‚¬åœæ˜¾ç¤º") |
 
-### ´úÂë
+### ä»£ç 
   
-* [1.´û¿îÔ¤²â](https://github.com/Jack-Cherish/Machine-Learning/blob/master/Decision%20Tree/Decision%20Tree.py "ĞüÍ£ÏÔÊ¾")
+* [1.è´·æ¬¾é¢„æµ‹](https://github.com/Jack-Cherish/Machine-Learning/blob/master/Decision%20Tree/Decision%20Tree.py "æ‚¬åœæ˜¾ç¤º")
 
-* [2.ÒşĞÎÑÛ¾µ](https://github.com/Jack-Cherish/Machine-Learning/blob/master/Decision%20Tree/Sklearn-Decision%20Tree.py "ĞüÍ£ÏÔÊ¾")
+* [2.éšå½¢çœ¼é•œ](https://github.com/Jack-Cherish/Machine-Learning/blob/master/Decision%20Tree/Sklearn-Decision%20Tree.py "æ‚¬åœæ˜¾ç¤º")
 
-## µÚËÄÕÂ£ºNavie Bayes£¨ÆÓËØ±´Ò¶Ë¹£©
+## ç¬¬å››ç« ï¼šNavie Bayesï¼ˆæœ´ç´ è´å¶æ–¯ï¼‰
 
-|   ÎÄÕÂ   |    CSDN    |    Öªºõ    | 
+|   æ–‡ç«    |    CSDN    |    çŸ¥ä¹    | 
 | :------  | :--------: | :--------: |
-| Python3¡¶»úÆ÷Ñ§Ï°ÊµÕ½¡·Ñ§Ï°±Ê¼Ç£¨ËÄ£©£ºÆÓËØ±´Ò¶Ë¹»ù´¡ÆªÖ®ÑÔÂÛ¹ıÂËÆ÷ | [CSDN](http://blog.csdn.net/c406495762/article/details/77341116 "ĞüÍ£ÏÔÊ¾") | [Öªºõ](https://zhuanlan.zhihu.com/p/28719332 "ĞüÍ£ÏÔÊ¾") |
-| Python3¡¶»úÆ÷Ñ§Ï°ÊµÕ½¡·Ñ§Ï°±Ê¼Ç£¨Îå£©£ºÆÓËØ±´Ò¶Ë¹ÊµÕ½ÆªÖ®ĞÂÀËĞÂÎÅ·ÖÀà | [CSDN](http://blog.csdn.net/c406495762/article/details/77500679 "ĞüÍ£ÏÔÊ¾") | [Öªºõ](https://zhuanlan.zhihu.com/p/28720393 "ĞüÍ£ÏÔÊ¾") |
+| Python3ã€Šæœºå™¨å­¦ä¹ å®æˆ˜ã€‹å­¦ä¹ ç¬”è®°ï¼ˆå››ï¼‰ï¼šæœ´ç´ è´å¶æ–¯åŸºç¡€ç¯‡ä¹‹è¨€è®ºè¿‡æ»¤å™¨ | [CSDN](http://blog.csdn.net/c406495762/article/details/77341116 "æ‚¬åœæ˜¾ç¤º") | [çŸ¥ä¹](https://zhuanlan.zhihu.com/p/28719332 "æ‚¬åœæ˜¾ç¤º") |
+| Python3ã€Šæœºå™¨å­¦ä¹ å®æˆ˜ã€‹å­¦ä¹ ç¬”è®°ï¼ˆäº”ï¼‰ï¼šæœ´ç´ è´å¶æ–¯å®æˆ˜ç¯‡ä¹‹æ–°æµªæ–°é—»åˆ†ç±» | [CSDN](http://blog.csdn.net/c406495762/article/details/77500679 "æ‚¬åœæ˜¾ç¤º") | [çŸ¥ä¹](https://zhuanlan.zhihu.com/p/28720393 "æ‚¬åœæ˜¾ç¤º") |
 
-### ´úÂë
+### ä»£ç 
   
-* [1.ÑÔÂÛ¹ıÂËÆ÷](https://github.com/Jack-Cherish/Machine-Learning/blob/master/Naive%20Bayes/bayes.py "ĞüÍ£ÏÔÊ¾")
+* [1.è¨€è®ºè¿‡æ»¤å™¨](https://github.com/Jack-Cherish/Machine-Learning/blob/master/Naive%20Bayes/bayes.py "æ‚¬åœæ˜¾ç¤º")
 
-* [2.À¬»øÓÊ¼ş¹ıÂËÆ÷](https://github.com/Jack-Cherish/Machine-Learning/blob/master/Naive%20Bayes/bayes-modify.py "ĞüÍ£ÏÔÊ¾")
+* [2.åƒåœ¾é‚®ä»¶è¿‡æ»¤å™¨](https://github.com/Jack-Cherish/Machine-Learning/blob/master/Naive%20Bayes/bayes-modify.py "æ‚¬åœæ˜¾ç¤º")
 
-* [3.ĞÂÀËĞÂÎÅ·ÖÀàÆ÷](https://github.com/Jack-Cherish/Machine-Learning/blob/master/Naive%20Bayes/nbc.py "ĞüÍ£ÏÔÊ¾")
+* [3.æ–°æµªæ–°é—»åˆ†ç±»å™¨](https://github.com/Jack-Cherish/Machine-Learning/blob/master/Naive%20Bayes/nbc.py "æ‚¬åœæ˜¾ç¤º")
   
-## µÚÎåÕÂ£ºLogistic£¨Logistic»Ø¹é£©
+## ç¬¬äº”ç« ï¼šLogisticï¼ˆLogisticå›å½’ï¼‰
 
-|   ÎÄÕÂ   |    CSDN    |    Öªºõ    | 
+|   æ–‡ç«    |    CSDN    |    çŸ¥ä¹    | 
 | :------  | :--------: | :--------: |
-| Python3¡¶»úÆ÷Ñ§Ï°ÊµÕ½¡·Ñ§Ï°±Ê¼Ç£¨Áù£©£ºLogistic»Ø¹é»ù´¡ÆªÖ®Ìİ¶ÈÉÏÉıËã·¨ | [CSDN](http://blog.csdn.net/c406495762/article/details/77723333 "ĞüÍ£ÏÔÊ¾") | [Öªºõ](https://zhuanlan.zhihu.com/p/28922957 "ĞüÍ£ÏÔÊ¾") |
-| Python3¡¶»úÆ÷Ñ§Ï°ÊµÕ½¡·Ñ§Ï°±Ê¼Ç£¨Æß£©£ºLogistic»Ø¹éÊµÕ½ÆªÖ®Ô¤²â²¡ÂíËÀÍöÂÊ | [CSDN](http://blog.csdn.net/c406495762/article/details/77851973 "ĞüÍ£ÏÔÊ¾") | [Öªºõ](https://zhuanlan.zhihu.com/p/29073560 "ĞüÍ£ÏÔÊ¾") |
+| Python3ã€Šæœºå™¨å­¦ä¹ å®æˆ˜ã€‹å­¦ä¹ ç¬”è®°ï¼ˆå…­ï¼‰ï¼šLogisticå›å½’åŸºç¡€ç¯‡ä¹‹æ¢¯åº¦ä¸Šå‡ç®—æ³• | [CSDN](http://blog.csdn.net/c406495762/article/details/77723333 "æ‚¬åœæ˜¾ç¤º") | [çŸ¥ä¹](https://zhuanlan.zhihu.com/p/28922957 "æ‚¬åœæ˜¾ç¤º") |
+| Python3ã€Šæœºå™¨å­¦ä¹ å®æˆ˜ã€‹å­¦ä¹ ç¬”è®°ï¼ˆä¸ƒï¼‰ï¼šLogisticå›å½’å®æˆ˜ç¯‡ä¹‹é¢„æµ‹ç—…é©¬æ­»äº¡ç‡ | [CSDN](http://blog.csdn.net/c406495762/article/details/77851973 "æ‚¬åœæ˜¾ç¤º") | [çŸ¥ä¹](https://zhuanlan.zhihu.com/p/29073560 "æ‚¬åœæ˜¾ç¤º") |
 
-### ´úÂë
+### ä»£ç 
 
-* [1.Logistic»ù´¡ÑµÁ·](https://github.com/Jack-Cherish/Machine-Learning/blob/master/Logistic/LogRegres.py "ĞüÍ£ÏÔÊ¾")
+* [1.LogisticåŸºç¡€è®­ç»ƒ](https://github.com/Jack-Cherish/Machine-Learning/blob/master/Logistic/LogRegres.py "æ‚¬åœæ˜¾ç¤º")
 
-* [2.¸Ä½øµÄËæ»úÌİ¶ÈÉÏÉıËã·¨](https://github.com/Jack-Cherish/Machine-Learning/blob/master/Logistic/LogRegres-gj.py "ĞüÍ£ÏÔÊ¾")
+* [2.æ”¹è¿›çš„éšæœºæ¢¯åº¦ä¸Šå‡ç®—æ³•](https://github.com/Jack-Cherish/Machine-Learning/blob/master/Logistic/LogRegres-gj.py "æ‚¬åœæ˜¾ç¤º")
 
-* [3.²¡ÂíËÀÍöÂÊÔ¤²â](https://github.com/Jack-Cherish/Machine-Learning/blob/master/Logistic/colicLogRegres.py "ĞüÍ£ÏÔÊ¾")
+* [3.ç—…é©¬æ­»äº¡ç‡é¢„æµ‹](https://github.com/Jack-Cherish/Machine-Learning/blob/master/Logistic/colicLogRegres.py "æ‚¬åœæ˜¾ç¤º")
+
+## ç¬¬å…­ç« ï¼šSVMï¼ˆæ”¯æŒå‘é‡æœºï¼‰
+
+|   æ–‡ç«    |    CSDN    |    çŸ¥ä¹    | 
+| :------  | :--------: | :--------: |
+| Python3ã€Šæœºå™¨å­¦ä¹ å®æˆ˜ã€‹å­¦ä¹ ç¬”è®°ï¼ˆå…«ï¼‰ï¼šæ”¯æŒå‘é‡æœºåŸç†ç¯‡ä¹‹æ‰‹æ’•çº¿æ€§SVM | no | [çŸ¥ä¹](https://zhuanlan.zhihu.com/p/29604517 "æ‚¬åœæ˜¾ç¤º") |
+
+### ä»£ç 
+
+* [1.ç®€åŒ–ç‰ˆSMOç®—æ³•](https://github.com/Jack-Cherish/Machine-Learning/blob/master/SVM/svm-simple.py "æ‚¬åœæ˜¾ç¤º")
+
+
+
+
+
