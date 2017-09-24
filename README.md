@@ -66,7 +66,7 @@
 
 |   文章   |    CSDN    |    知乎    | 
 | :------  | :--------: | :--------: |
-| Python3《机器学习实战》学习笔记（八）：支持向量机原理篇之手撕线性SVM | no | [知乎](https://zhuanlan.zhihu.com/p/29604517 "悬停显示") |
+| Python3《机器学习实战》学习笔记（八）：支持向量机原理篇之手撕线性SVM | [CSDN](http://blog.csdn.net/c406495762/article/details/78072313 "悬停显示") | [知乎](https://zhuanlan.zhihu.com/p/29604517 "悬停显示") |
 
 ### 代码
 
