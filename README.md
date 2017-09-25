@@ -4,6 +4,7 @@
 * 机器学习实战（详细代码注释+训练数据集），持续更新中！<br>
 * 欢迎关注我的[[CSDN博客专栏](http://blog.csdn.net/column/details/16415.html "悬停显示")]<br>
 * 欢迎关注我的[[知乎专栏](https://zhuanlan.zhihu.com/ml-jack "悬停显示")]<br>
+* 学习交流群【328127489】<a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=e70f3fcff3761450fda9b43eadc1910dac308a962ef9e3e87941cd2c681c4bb4"><img border="0" src="https://github.com/Jack-Cherish/Pictures/blob/master/qqgroup.png" alt="Coder" title="Coder"></a><br>
 
 ## 第二章：kNN（k-邻域算法）
 
