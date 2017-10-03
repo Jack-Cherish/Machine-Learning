@@ -36,10 +36,10 @@ def loadDataSet(fileName):
 函数说明:随机选择alpha
 
 Parameters:
-    i - alpha_i
+    i - alpha_i的索引值
     m - alpha参数个数
 Returns:
-    j - alpha_j
+    j - alpha_j的索引值
 Author:
     Jack Cui
 Blog:
