@@ -11,7 +11,7 @@ Blog:
 Zhihu:
     https://www.zhihu.com/people/Jack--Cui/
 Modify:
-	2017-09-23
+	2017-10-03
 """
 
 class optStruct:
