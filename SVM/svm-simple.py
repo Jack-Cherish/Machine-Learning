@@ -148,7 +148,7 @@ def smoSimple(dataMatIn, classLabels, C, toler, maxIter):
 			#步骤1：计算误差Ei
 			fXi = float(np.multiply(alphas,labelMat).T*(dataMatrix*dataMatrix[i,:].T)) + b
 			Ei = fXi - float(labelMat[i])
-			#优化alpha，更设定一定的容错率。
+			#优化alpha，设定一定的容错率。
 			if ((labelMat[i]*Ei < -toler) and (alphas[i] < C)) or ((labelMat[i]*Ei > toler) and (alphas[i] > 0)):
 				#随机选择另一个与alpha_i成对优化的alpha_j
 				j = selectJrand(i,m)
