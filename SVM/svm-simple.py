@@ -1,9 +1,7 @@
 # -*- coding:UTF-8 -*-
-from time import sleep
 import matplotlib.pyplot as plt
 import numpy as np
 import random
-import types
 
 """
 函数说明:读取数据
