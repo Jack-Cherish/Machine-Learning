@@ -57,7 +57,7 @@ def selectJrand(i, m):
 函数说明:修剪alpha
 
 Parameters:
-    aj - alpha值
+    aj - alpha_j值
     H - alpha上限
     L - alpha下限
 Returns:
