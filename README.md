@@ -68,10 +68,18 @@
 |   文章   |    CSDN    |    知乎    | 
 | :------  | :--------: | :--------: |
 | Python3《机器学习实战》学习笔记（八）：支持向量机原理篇之手撕线性SVM | [CSDN](http://blog.csdn.net/c406495762/article/details/78072313 "悬停显示") | [知乎](https://zhuanlan.zhihu.com/p/29604517 "悬停显示") |
+| Python3《机器学习实战》学习笔记（九）：支持向量机实战篇之再撕非线性SVM | [CSDN](http://blog.csdn.net/c406495762/article/details/78158354 "悬停显示") | [知乎](https://zhuanlan.zhihu.com/p/29872905 "悬停显示") |
 
 ### 代码
 
 * [1.简化版SMO算法](https://github.com/Jack-Cherish/Machine-Learning/blob/master/SVM/svm-simple.py "悬停显示")
+
+* [2.完整版SMO算法](https://github.com/Jack-Cherish/Machine-Learning/blob/master/SVM/svm-smo.py "悬停显示")
+
+* [3.非线性SVM](https://github.com/Jack-Cherish/Machine-Learning/blob/master/SVM/svmMLiA.py "悬停显示")
+
+* [4.Sklearn SVC手写数字识别](https://github.com/Jack-Cherish/Machine-Learning/blob/master/SVM/svm-svc.py "悬停显示")
+
 
 
 
