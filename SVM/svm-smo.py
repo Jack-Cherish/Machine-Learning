@@ -208,6 +208,7 @@ def smoP(dataMatIn, classLabels, C, toler, maxIter):
 	iter = 0 																						#初始化当前迭代次数
 	entireSet = True; alphaPairsChanged = 0
 	while (iter < maxIter) and ((alphaPairsChanged > 0) or (entireSet)):							#遍历整个数据集都alpha也没有更新或者超过最大迭代次数,则退出循环
+		alphaPairsChanged = 0
 		if entireSet:																				#遍历整个数据集   						
 			for i in range(oS.m):        
 				alphaPairsChanged += innerL(i,oS)													#使用优化的SMO算法
