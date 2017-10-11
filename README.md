@@ -80,6 +80,23 @@
 
 * [4.Sklearn SVC手写数字识别](https://github.com/Jack-Cherish/Machine-Learning/blob/master/SVM/svm-svc.py "悬停显示")
 
+## 第七章：AdaBoost
+
+|   文章   |    CSDN    |    知乎    | 
+| :------  | :--------: | :--------: |
+| Python3《机器学习实战》学习笔记（十）：提升分类器性能利器-AdaBoost | no | [知乎](https://zhuanlan.zhihu.com/p/30035094 "悬停显示") |
+
+### 代码
+
+* [1.基于单层决策树的AdaBoost训练过程](https://github.com/Jack-Cherish/Machine-Learning/blob/master/AdaBoost/adaboost.py "悬停显示")
+
+* [2.在难数据集上应用AdaBoost](https://github.com/Jack-Cherish/Machine-Learning/blob/master/AdaBoost/horse_adaboost.py "悬停显示")
+
+* [3.sklearn实现AdaBoost](https://github.com/Jack-Cherish/Machine-Learning/blob/master/AdaBoost/sklearn_adaboost.py "悬停显示")
+
+* [4.ROC曲线绘制](https://github.com/Jack-Cherish/Machine-Learning/blob/master/AdaBoost/ROC.py "悬停显示")
+
+
 
 
 
