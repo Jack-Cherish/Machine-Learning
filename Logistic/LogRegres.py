@@ -1,7 +1,6 @@
 # -*- coding:UTF-8 -*-
 import matplotlib.pyplot as plt
 import numpy as np
-import types
 
 """
 函数说明:梯度上升算法测试函数
@@ -184,6 +183,6 @@ def plotBestFit(weights):
 	plt.show()		
 
 if __name__ == '__main__':
-	dataMat, labelMat = loadDataSet()			
+	dataMat, labelMat = loadDataSet()	
 	weights = gradAscent(dataMat, labelMat)
 	plotBestFit(weights)
