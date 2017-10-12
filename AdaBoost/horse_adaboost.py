@@ -83,13 +83,13 @@ def buildStump(dataArr,classLabels,D):
 
 def adaBoostTrainDS(dataArr, classLabels, numIt = 40):
 	"""
-	训练基于单层决策树的AdaBoost分类器
+	使用AdaBoost算法提升弱分类器性能
 	Parameters:
 		dataArr - 数据矩阵
 		classLabels - 数据标签
 		numIt - 最大迭代次数
 	Returns:
-		weakClassArr - 训练好的AdaBoost分类器
+		weakClassArr - 训练好的分类器
 		aggClassEst - 类别估计累计值
 	"""
 	weakClassArr = []
@@ -120,7 +120,7 @@ def adaClassify(datToClass,classifierArr):
 	AdaBoost分类函数
 	Parameters:
 		datToClass - 待分类样例
-		classifierArr - 训练好的AdaBoost分类器
+		classifierArr - 训练好的分类器
 	Returns:
 		分类结果
 	"""
@@ -138,6 +138,10 @@ if __name__ == '__main__':
 	weakClassArr, aggClassEst = adaBoostTrainDS(dataArr, LabelArr)
 	testArr, testLabelArr = loadDataSet('horseColicTest2.txt')
 	print(weakClassArr)
+	predictions = adaClassify(dataArr, weakClassArr)
+	errArr = np.mat(np.ones((len(dataArr), 1)))
+	print('训练集的错误率:%.3f%%' % float(errArr[predictions != np.mat(LabelArr).T].sum() / len(dataArr) * 100))
 	predictions = adaClassify(testArr, weakClassArr)
 	errArr = np.mat(np.ones((len(testArr), 1)))
-	print('错误率:%.3f%%' % float(errArr[predictions != np.mat(testLabelArr).T].sum() / len(testArr)))
+	print('测试集的错误率:%.3f%%' % float(errArr[predictions != np.mat(testLabelArr).T].sum() / len(testArr) * 100))
+	
