@@ -97,7 +97,7 @@ def buildStump(dataArr,classLabels,D):
 				errArr = np.mat(np.ones((m,1))) 								#初始化误差矩阵
 				errArr[predictedVals == labelMat] = 0 							#分类正确的,赋值为0
 				weightedError = D.T * errArr  									#计算误差
-				print("split: dim %d, thresh %.2f, thresh ineqal: %s, the weighted error is %.3f" % (i, threshVal, inequal, weightedError))
+				# print("split: dim %d, thresh %.2f, thresh ineqal: %s, the weighted error is %.3f" % (i, threshVal, inequal, weightedError))
 				if weightedError < minError: 									#找到误差最小的分类方式
 					minError = weightedError
 					bestClasEst = predictedVals.copy()
@@ -123,20 +123,20 @@ def adaBoostTrainDS(dataArr, classLabels, numIt = 40):
 	aggClassEst = np.mat(np.zeros((m,1)))
 	for i in range(numIt):
 		bestStump, error, classEst = buildStump(dataArr, classLabels, D) 	#构建单层决策树
-		print("D:",D.T)
+		# print("D:",D.T)
 		alpha = float(0.5 * np.log((1.0 - error) / max(error, 1e-16))) 		#计算弱学习算法权重alpha,使error不等于0,因为分母不能为0
 		bestStump['alpha'] = alpha  										#存储弱学习算法权重 
 		weakClassArr.append(bestStump)                  					#存储单层决策树
-		print("classEst: ", classEst.T)
+		# print("classEst: ", classEst.T)
 		expon = np.multiply(-1 * alpha * np.mat(classLabels).T, classEst) 	#计算e的指数项
 		D = np.multiply(D, np.exp(expon))                           		   
 		D = D / D.sum()														#根据样本权重公式，更新样本权重
 		#计算AdaBoost误差，当误差为0的时候，退出循环
 		aggClassEst += alpha * classEst  									#计算类别估计累计值								
-		print("aggClassEst: ", aggClassEst.T)
+		# print("aggClassEst: ", aggClassEst.T)
 		aggErrors = np.multiply(np.sign(aggClassEst) != np.mat(classLabels).T, np.ones((m,1))) 	#计算误差
 		errorRate = aggErrors.sum() / m
-		print("total error: ", errorRate)
+		# print("total error: ", errorRate)
 		if errorRate == 0.0: break 											#误差为0，退出循环
 	return weakClassArr, aggClassEst
 
@@ -162,4 +162,4 @@ def adaClassify(datToClass,classifierArr):
 if __name__ == '__main__':
 	dataArr,classLabels = loadSimpData()
 	weakClassArr, aggClassEst = adaBoostTrainDS(dataArr, classLabels)
-	print(adaClassify([0,0], weakClassArr))
+	print(adaClassify([[0,0],[5,5]], weakClassArr))
