@@ -84,7 +84,7 @@
 
 |   文章   |    CSDN    |    知乎    | 
 | :------  | :--------: | :--------: |
-| Python3《机器学习实战》学习笔记（十）：提升分类器性能利器-AdaBoost | no | [知乎](https://zhuanlan.zhihu.com/p/30035094 "悬停显示") |
+| Python3《机器学习实战》学习笔记（十）：提升分类器性能利器-AdaBoost | [CSDN](http://blog.csdn.net/c406495762/article/details/78212124 "悬停显示") | [知乎](https://zhuanlan.zhihu.com/p/30035094 "悬停显示") |
 
 ### 代码
 
