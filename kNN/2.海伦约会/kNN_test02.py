@@ -47,6 +47,7 @@ def classify0(inX, dataSet, labels, k):
 	#key=operator.itemgetter(0)根据字典的键进行排序
 	#reverse降序排序字典
 	sortedClassCount = sorted(classCount.items(),key=operator.itemgetter(1),reverse=True)
+	print(sortedClassCount)
 	#返回次数最多的类别,即所要分类的类别
 	return sortedClassCount[0][0]
 
@@ -228,7 +229,7 @@ def datingClassTest():
 		#前numTestVecs个数据作为测试集,后m-numTestVecs个数据作为训练集
 		classifierResult = classify0(normMat[i,:], normMat[numTestVecs:m,:], 
 			datingLabels[numTestVecs:m], 4)
-		print("分类结果:%d\t真实类别:%d" % (classifierResult, datingLabels[i]))
+		print("分类结果:%s\t真实类别:%d" % (classifierResult, datingLabels[i]))
 		if classifierResult != datingLabels[i]:
 			errorCount += 1.0
 	print("错误率:%f%%" %(errorCount/float(numTestVecs)*100))
@@ -264,7 +265,7 @@ def classifyPerson():
 	#返回分类结果
 	classifierResult = classify0(norminArr, normMat, datingLabels, 3)
 	#打印结果
-	print("你可能%s这个人" % (resultList[classifierResult]))
+	print("你可能%s这个人" % (resultList[classifierResult-1]))
 
 """
 函数说明:main函数
@@ -278,4 +279,4 @@ Modify:
 	2017-03-24
 """
 if __name__ == '__main__':
-	classifyPerson()
+	datingClassTest()
