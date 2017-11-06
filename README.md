@@ -13,6 +13,10 @@
 
 * 我的个人网站，欢迎关注：http://www.cuijiahua.com/
 
+* 当然也欢迎关注我的公众号：
+
+	<img border="0" src="https://github.com/Jack-Cherish/Pictures/blob/master/qqgroup.png" alt="Coder" title="Coder"></a>
+
 ## 第二章：kNN（k-邻域算法）
 
 |   文章   |    CSDN    |    知乎    | 
