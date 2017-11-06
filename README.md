@@ -15,7 +15,7 @@
 
 * 当然也欢迎关注我的公众号：
 
-	<img border="0" src="https://github.com/Jack-Cherish/Pictures/blob/master/qqgroup.png" alt="Coder" title="Coder"></a>
+	<img border="0" src="https://github.com/Jack-Cherish/Pictures/blob/master/gzh.jpg" alt="ML" title="ML"></a>
 
 ## 第二章：kNN（k-邻域算法）
 
