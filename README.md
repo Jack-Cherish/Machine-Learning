@@ -13,7 +13,7 @@
 
 * 我的个人网站，欢迎关注：http://www.cuijiahua.com/
 
-* 当然也欢迎关注我的公众号：
+* 我们的公众号：
 
 	<img border="0" src="https://github.com/Jack-Cherish/Pictures/blob/master/gzh.jpg" alt="ML" title="ML"></a>
 
