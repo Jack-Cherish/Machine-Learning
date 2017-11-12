@@ -1,6 +1,7 @@
 # -*- coding: UTF-8 -*-
 import numpy as np
 import operator
+import collections
 
 """
 函数说明:创建数据集
@@ -38,13 +39,13 @@ Modify:
 		Use list comprehension and Counter to simplify code
 	2017-07-13
 """
-def classify0(inX, dataSet, labels, k):
+def classify0(inx, dataset, labels, k):
 	# 计算距离
 	dist = np.sum((inx - dataset)**2, axis=1)**0.5
 	# k个最近的标签
 	k_labels = [labels[index] for index in dist.argsort()[0 : k]]
 	# 出现次数最多的标签即为最终类别
-	label = Counter(k_labels).most_common(1)[0][0]
+	label = collections.Counter(k_labels).most_common(1)[0][0]
 	return label
 
 if __name__ == '__main__':
