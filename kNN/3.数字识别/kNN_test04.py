@@ -39,6 +39,12 @@ Returns:
 	无
 
 Modify:
+    Modify:
+	2017-11-14 by Cugtyt 
+		* GitHub(https://github.com/Cugtyt) 
+		* Email(cugtyt@qq.com)
+		Simplify if condition.
+		Remove float(), not need in python3
 	2017-07-15
 """
 def handwritingClassTest():
@@ -59,7 +65,7 @@ def handwritingClassTest():
 		#将获得的类别添加到hwLabels中
 		hwLabels.append(classNumber)
 		#将每一个文件的1x1024数据存储到trainingMat矩阵中
-		trainingMat[i,:] = img2vector('trainingDigits/%s' % (fileNameStr))
+		trainingMat[i] = img2vector('trainingDigits/%s' % (fileNameStr))
 	#构建kNN分类器
 	neigh = kNN(n_neighbors = 3, algorithm = 'auto')
 	#拟合模型, trainingMat为测试矩阵,hwLabels为对应的标签
@@ -67,7 +73,7 @@ def handwritingClassTest():
 	#返回testDigits目录下的文件列表
 	testFileList = listdir('testDigits')
 	#错误检测计数
-	errorCount = 0.0
+	errorCount = 0
 	#测试数据的数量
 	mTest = len(testFileList)
 	#从文件中解析出测试集的类别并进行分类测试
@@ -82,8 +88,7 @@ def handwritingClassTest():
 		# classifierResult = classify0(vectorUnderTest, trainingMat, hwLabels, 3)
 		classifierResult = neigh.predict(vectorUnderTest)
 		print("分类返回结果为%d\t真实结果为%d" % (classifierResult, classNumber))
-		if(classifierResult != classNumber):
-			errorCount += 1.0
+		errorCount += classifierResult != classNumber
 	print("总共错了%d个数据\n错误率为%f%%" % (errorCount, errorCount/mTest * 100))
 
 

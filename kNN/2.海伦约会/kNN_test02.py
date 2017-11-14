@@ -212,7 +212,7 @@ def datingClassTest():
 		classifierResult = classify0(normMat[i], normMat[numTestVecs : m],
 			datingLabels[numTestVecs : m], 4)
 		print("分类结果:%s\t真实类别:%d" % (classifierResult, datingLabels[i]))
-		errorCount += float(classifierResult != datingLabels[i])
+		errorCount += classifierResult != datingLabels[i]
 	print("错误率:%f%%" % (errorCount / float(numTestVecs) * 100))
 
 """
