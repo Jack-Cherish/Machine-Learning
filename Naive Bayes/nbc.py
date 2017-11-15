@@ -23,7 +23,7 @@ Author:
 Blog:
 	http://blog.csdn.net/c406495762
 Modify:
-    2017-11-09 by Cugtyt 
+    2017-11-15 by Cugtyt 
 		* GitHub(https://github.com/Cugtyt) 
 		* Email(cugtyt@qq.com)
 		Use enumerate and defaultdict to make code more readable.
@@ -135,7 +135,7 @@ Author:
 Blog:
 	http://blog.csdn.net/c406495762
 Modify:
-    2017-11-09 by Cugtyt 
+    2017-11-15 by Cugtyt 
 		* GitHub(https://github.com/Cugtyt) 
 		* Email(cugtyt@qq.com)
 		Use enumerate to simplify iteration.

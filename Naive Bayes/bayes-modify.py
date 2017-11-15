@@ -16,7 +16,7 @@ Author:
 Blog:
 	http://blog.csdn.net/c406495762
 Modify:
-	2017-11-09 by Cugtyt 
+	2017-11-15 by Cugtyt 
 		* GitHub(https://github.com/Cugtyt) 
 		* Email(cugtyt@qq.com)
 		Use list comprehension to clear code.
@@ -39,7 +39,7 @@ Author:
 Blog:
 	http://blog.csdn.net/c406495762
 Modify:
-    2017-11-09 by Cugtyt 
+    2017-11-15 by Cugtyt 
 		* GitHub(https://github.com/Cugtyt) 
 		* Email(cugtyt@qq.com)
 		Use list comprehension to clear code.
@@ -123,7 +123,7 @@ Author:
 Blog:
 	http://blog.csdn.net/c406495762
 Modify:
-    2017-11-09 by Cugtyt 
+    2017-11-15 by Cugtyt 
 		* GitHub(https://github.com/Cugtyt) 
 		* Email(cugtyt@qq.com)
 		Simplify return.

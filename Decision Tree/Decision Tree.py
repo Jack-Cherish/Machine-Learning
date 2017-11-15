@@ -18,7 +18,7 @@ Author:
 Blog:
 	http://blog.csdn.net/c406495762
 Modify:
-    2017-11-09 by Cugtyt 
+    2017-11-15 by Cugtyt 
 		* GitHub(https://github.com/Cugtyt) 
 		* Email(cugtyt@qq.com)
 		Use list comprehension to simplify for.
@@ -224,7 +224,7 @@ Author:
 Blog:
 	http://blog.csdn.net/c406495762
 Modify:
-    2017-11-09 by Cugtyt 
+    2017-11-15 by Cugtyt 
 		* GitHub(https://github.com/Cugtyt) 
 		* Email(cugtyt@qq.com)
 		Use `is` instead of __name__ == 'dict'

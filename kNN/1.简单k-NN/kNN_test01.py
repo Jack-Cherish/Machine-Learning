@@ -33,7 +33,7 @@ Returns:
 	sortedClassCount[0][0] - 分类结果
 
 Modify:
-	2017-11-09 by Cugtyt 
+	2017-11-14 by Cugtyt 
 		* GitHub(https://github.com/Cugtyt) 
 		* Email(cugtyt@qq.com)
 		Use list comprehension and Counter to simplify code
