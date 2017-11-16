@@ -33,7 +33,7 @@ def img2vector(filename):
 		lineStr = fr.readline()
 		#每一行的前32个元素依次添加到returnVect中
 		for j in range(32):
-			returnVect[0, 32*i+j] = int(lineStr[j])
+			returnVect[0, 32 * i + j] = int(lineStr[j])
 	#返回转换后的1x1024向量
 	return returnVect
 
@@ -62,13 +62,13 @@ def handwritingClassTest():
 		#将获得的类别添加到hwLabels中
 		hwLabels.append(classNumber)
 		#将每一个文件的1x1024数据存储到trainingMat矩阵中
-		trainingMat[i,:] = img2vector('trainingDigits/%s' % (fileNameStr))
-	clf = SVC(C=200,kernel='rbf')
+		trainingMat[i] = img2vector('trainingDigits/%s' % (fileNameStr))
+	clf = SVC(C=200, kernel='rbf')
 	clf.fit(trainingMat,hwLabels)
 	#返回testDigits目录下的文件列表
 	testFileList = listdir('testDigits')
 	#错误检测计数
-	errorCount = 0.0
+	errorCount = 0
 	#测试数据的数量
 	mTest = len(testFileList)
 	#从文件中解析出测试集的类别并进行分类测试
@@ -83,8 +83,7 @@ def handwritingClassTest():
 		# classifierResult = classify0(vectorUnderTest, trainingMat, hwLabels, 3)
 		classifierResult = clf.predict(vectorUnderTest)
 		print("分类返回结果为%d\t真实结果为%d" % (classifierResult, classNumber))
-		if(classifierResult != classNumber):
-			errorCount += 1.0
+		errorCount += classifierResult != classNumber
 	print("总共错了%d个数据\n错误率为%f%%" % (errorCount, errorCount/mTest * 100))
 
 if __name__ == '__main__':
