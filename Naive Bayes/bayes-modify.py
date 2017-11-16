@@ -195,8 +195,8 @@ def spamTest():
     errorCount = 0                                                          #错误分类计数
     for docIndex in testSet:                                                #遍历测试集
         wordVector = setOfWords2Vec(vocabList, docList[docIndex])           #测试集的词集模型
-        if classifyNB(np.array(wordVector), p0V, p1V, pSpam) != classList[docIndex]:    #如果分类错误
-            errorCount += 1                                                 #错误计数加1
+        #如果分类错误
+        errorCount += classifyNB(np.array(wordVector), p0V, p1V, pSpam) != classList[docIndex]                                                 #错误计数加1
             print("分类错误的测试集：",docList[docIndex])
     print('错误率：%.2f%%' % (float(errorCount) / len(testSet) * 100))
 
