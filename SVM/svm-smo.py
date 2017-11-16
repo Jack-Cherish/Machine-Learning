@@ -60,7 +60,7 @@ def calcEk(oS, k):
 	Returns:
 	    Ek - 标号为k的数据误差
 	"""
-	fXk = float(np.multiply(oS.alphas, oS.labelMat).T * (oS.X * oS.X[k].T) + oS.b)
+	fXk = np.multiply(oS.alphas, oS.labelMat).T * (oS.X * oS.X[k].T) + oS.b
 	Ek = fXk - float(oS.labelMat[k])
 	return Ek
 

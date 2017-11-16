@@ -76,7 +76,7 @@ Modify:
 		Use max and min to simplify if.
     2017-09-21
 """
-def clipAlpha(aj,H,L):
+def clipAlpha(aj, H, L):
 	aj = min(aj, H)
 	aj = max(L, aj)
 	return aj
