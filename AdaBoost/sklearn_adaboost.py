@@ -16,13 +16,12 @@ Modify:
 
 def loadDataSet(fileName):
 	numFeat = len((open(fileName).readline().split('\t')))
-	dataMat = []; labelMat = []
+	dataMat = []
+	labelMat = []
 	fr = open(fileName)
 	for line in fr.readlines():
-		lineArr = []
 		curLine = line.strip().split('\t')
-		for i in range(numFeat - 1):
-			lineArr.append(float(curLine[i]))
+		lineArr = [float(curLine[i]) for i in range(numFeat - 1)]
 		dataMat.append(lineArr)
 		labelMat.append(float(curLine[-1]))
 
