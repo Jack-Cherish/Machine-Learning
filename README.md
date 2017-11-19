@@ -16,6 +16,10 @@
 * 我们的公众号，欢迎关注：
 
 	<img border="0" src="https://github.com/Jack-Cherish/Pictures/blob/master/gzh.jpg" alt="ML" title="ML"></a>
+	
+### 文章首发声明
+
+	文章在自己的个人网站首发，其他平台文章均属转发，如想获得最新更新进展，欢迎关注我的个人网站：http://www.cuijiahua.com/
 
 ## 第二章：kNN（k-邻域算法）
 
