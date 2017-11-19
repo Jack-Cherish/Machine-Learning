@@ -112,7 +112,7 @@
 
 |   文章   |  个人网站  |    CSDN    |    知乎    |
 | :------  | :--------: | :--------: | :--------: |
-| Python3《机器学习实战》学习笔记（十一）：线性回归基础篇之预测鲍鱼年龄 | [个人网站](http://www.cuijiahua.com/blog/2017/11/ml_11_regression_1.html "悬停显示") | no | [知乎](https://zhuanlan.zhihu.com/p/30035094 "悬停显示") |
+| Python3《机器学习实战》学习笔记（十一）：线性回归基础篇之预测鲍鱼年龄 | [个人网站](http://www.cuijiahua.com/blog/2017/11/ml_11_regression_1.html "悬停显示") | no | no |
 
 ### 代码
 
