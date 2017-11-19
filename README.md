@@ -108,7 +108,7 @@
 
 * [4.ROC曲线绘制](https://github.com/Jack-Cherish/Machine-Learning/blob/master/AdaBoost/ROC.py "悬停显示")
 
-## 第拔章：Regression
+## 第八章：Regression
 
 |   文章   |  个人网站  |    CSDN    |    知乎    |
 | :------  | :--------: | :--------: | :--------: |
