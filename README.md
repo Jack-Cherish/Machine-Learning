@@ -37,7 +37,7 @@
 |   文章   |  个人网站  |    CSDN    |    知乎    |
 | :------  | :--------: | :--------: | :--------: |
 | Python3《机器学习实战》学习笔记(二)：决策树基础篇之让我们从相亲说起 | [个人网站](http://www.cuijiahua.com/blog/2017/11/ml_2_decision_tree_1.html "悬停显示") | [CSDN](http://blog.csdn.net/c406495762/article/details/75663451 "悬停显示") | [知乎](https://zhuanlan.zhihu.com/p/28688281 "悬停显示") |
-| Python3《机器学习实战》学习笔记(三)：决策树实战篇之为自己配个隐形眼镜 | [个人网站](http://www.cuijiahua.com/blog/2017/11/ml_2_decision_tree_2.html "悬停显示") | [CSDN](http://blog.csdn.net/c406495762/article/details/76262487 "悬停显示") | [知乎](https://zhuanlan.zhihu.com/p/28714382 "悬停显示") |
+| Python3《机器学习实战》学习笔记(三)：决策树实战篇之为自己配个隐形眼镜 | [个人网站](http://www.cuijiahua.com/blog/2017/11/ml_3_decision_tree_2.html "悬停显示") | [CSDN](http://blog.csdn.net/c406495762/article/details/76262487 "悬停显示") | [知乎](https://zhuanlan.zhihu.com/p/28714382 "悬停显示") |
 
 ### 代码
   
@@ -50,7 +50,7 @@
 |   文章   |  个人网站  |    CSDN    |    知乎    |
 | :------  | :--------: | :--------: | :--------: |
 | Python3《机器学习实战》学习笔记（四）：朴素贝叶斯基础篇之言论过滤器 | [个人网站](http://www.cuijiahua.com/blog/2017/11/ml_4_bayes_1.html "悬停显示") | [CSDN](http://blog.csdn.net/c406495762/article/details/77341116 "悬停显示") | [知乎](https://zhuanlan.zhihu.com/p/28719332 "悬停显示") |
-| Python3《机器学习实战》学习笔记（五）：朴素贝叶斯实战篇之新浪新闻分类 | [个人网站](http://www.cuijiahua.com/blog/2017/11/ml_4_bayes_2.html "悬停显示") | [CSDN](http://blog.csdn.net/c406495762/article/details/77500679 "悬停显示") | [知乎](https://zhuanlan.zhihu.com/p/28720393 "悬停显示") |
+| Python3《机器学习实战》学习笔记（五）：朴素贝叶斯实战篇之新浪新闻分类 | [个人网站](http://www.cuijiahua.com/blog/2017/11/ml_5_bayes_2.html "悬停显示") | [CSDN](http://blog.csdn.net/c406495762/article/details/77500679 "悬停显示") | [知乎](https://zhuanlan.zhihu.com/p/28720393 "悬停显示") |
 
 ### 代码
   
@@ -65,7 +65,7 @@
 |   文章   |  个人网站  |    CSDN    |    知乎    |
 | :------  | :--------: | :--------: | :--------: |
 | Python3《机器学习实战》学习笔记（六）：Logistic回归基础篇之梯度上升算法 | [个人网站](http://www.cuijiahua.com/blog/2017/11/ml_6_logistic_1.html "悬停显示") | [CSDN](http://blog.csdn.net/c406495762/article/details/77723333 "悬停显示") | [知乎](https://zhuanlan.zhihu.com/p/28922957 "悬停显示") |
-| Python3《机器学习实战》学习笔记（七）：Logistic回归实战篇之预测病马死亡率 | [个人网站](http://www.cuijiahua.com/blog/2017/11/ml_6_logistic_2.html"悬停显示") | [CSDN](http://blog.csdn.net/c406495762/article/details/77851973 "悬停显示") | [知乎](https://zhuanlan.zhihu.com/p/29073560 "悬停显示") |
+| Python3《机器学习实战》学习笔记（七）：Logistic回归实战篇之预测病马死亡率 | [个人网站](http://www.cuijiahua.com/blog/2017/11/ml_7_logistic_2.html "悬停显示") | [CSDN](http://blog.csdn.net/c406495762/article/details/77851973 "悬停显示") | [知乎](https://zhuanlan.zhihu.com/p/29073560 "悬停显示") |
 
 ### 代码
 
@@ -80,7 +80,7 @@
 |   文章   |  个人网站  |    CSDN    |    知乎    |
 | :------  | :--------: | :--------: | :--------: |
 | Python3《机器学习实战》学习笔记（八）：支持向量机原理篇之手撕线性SVM | [个人网站](http://www.cuijiahua.com/blog/2017/11/ml_8_svm_1.html "悬停显示") | [CSDN](http://blog.csdn.net/c406495762/article/details/78072313 "悬停显示") | [知乎](https://zhuanlan.zhihu.com/p/29604517 "悬停显示") |
-| Python3《机器学习实战》学习笔记（九）：支持向量机实战篇之再撕非线性SVM | [个人网站](http://www.cuijiahua.com/blog/2017/11/ml_8_svm_2.html "悬停显示") | [CSDN](http://blog.csdn.net/c406495762/article/details/78158354 "悬停显示") | [知乎](https://zhuanlan.zhihu.com/p/29872905 "悬停显示") |
+| Python3《机器学习实战》学习笔记（九）：支持向量机实战篇之再撕非线性SVM | [个人网站](http://www.cuijiahua.com/blog/2017/11/ml_9_svm_2.html "悬停显示") | [CSDN](http://blog.csdn.net/c406495762/article/details/78158354 "悬停显示") | [知乎](https://zhuanlan.zhihu.com/p/29872905 "悬停显示") |
 
 ### 代码
 
