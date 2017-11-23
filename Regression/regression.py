@@ -99,5 +99,68 @@ def plotwMat():
 	plt.setp(ax_ylabel_text, size = 10, weight = 'bold', color = 'black')
 	plt.show()
 
+
+def regularize(xMat, yMat):
+	"""
+	函数说明:数据标准化
+	Parameters:
+		xMat - x数据集
+		yMat - y数据集
+	Returns:
+		inxMat - 标准化后的x数据集
+		inyMat - 标准化后的y数据集
+	Website:
+		http://www.cuijiahua.com/
+	Modify:
+		2017-11-23
+	"""	
+	inxMat = xMat.copy()														#数据拷贝
+	inyMat = yMat.copy()
+	yMean = np.mean(yMat, 0)													#行与行操作，求均值
+	inyMat = yMat - yMean														#数据减去均值
+	inMeans = np.mean(inxMat, 0)   												#行与行操作，求均值
+	inVar = np.var(inxMat, 0)     												#行与行操作，求方差
+	inxMat = (inxMat - inMeans) / inVar											#数据减去均值除以方差实现标准化
+	return inxMat, inyMat
+
+def stageWise(xArr, yArr, eps = 0.01, numIt = 100):
+	"""
+	函数说明:前向逐步线性回归
+	Parameters:
+		xArr - x数据集
+		yArr - y数据集
+	Returns:
+		
+	Website:
+		http://www.cuijiahua.com/
+	Modify:
+		2017-11-23
+	"""
+	xMat = np.mat(xArr); yMat = np.mat(yArr).T 										#数据集
+	yMean = np.mean(yMat, 0)														#计算y的均值
+	yMat = yMat - yMean																#
+	xMat = regularize(xMat)
+	m, n = np.shape(xMat)
+	returnMat = np.zeros((numIt, n))
+	ws = np.zeros((n, 1))
+	wsTest = ws.copy()
+	wsMax = ws.copy()
+	for i in range(numIt):
+		print ws.T
+		lowestError = inf; 
+		for j in range(n):
+			for sign in [-1,1]:
+				wsTest = ws.copy()
+				wsTest[j] += eps*sign
+				yTest = xMat*wsTest
+				rssE = rssError(yMat.A,yTest.A)
+				if rssE < lowestError:
+					lowestError = rssE
+					wsMax = wsTest
+		ws = wsMax.copy()
+		returnMat[i,:] = ws.T
+	return returnMat
+
 if __name__ == '__main__':
-	plotwMat()
+	xArr, yArr = loadDataSet('abalone.txt')
+	stageWise(xArr, yArr)
