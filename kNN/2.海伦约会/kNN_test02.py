@@ -259,7 +259,7 @@ def classifyPerson():
 	#训练集归一化
 	normMat, ranges, minVals = autoNorm(datingDataMat)
 	#生成NumPy数组,测试集
-	inArr = np.array([precentTats, ffMiles, iceCream])
+	inArr = np.array([ffMiles, precentTats, iceCream])
 	#测试集归一化
 	norminArr = (inArr - minVals) / ranges
 	#返回分类结果
