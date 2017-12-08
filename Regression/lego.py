@@ -61,7 +61,28 @@ def scrapePage(retX, retY, inFile, yr, numPce, origPrc):
 		i += 1
 		currentRow = soup.find_all('table', r = "%d" % i)
 
-#         
+def ridgeRegres(xMat, yMat, lam = 0.2):
+	"""
+	函数说明:岭回归
+	Parameters:
+		xMat - x数据集
+		yMat - y数据集
+		lam - 缩减系数
+	Returns:
+		ws - 回归系数
+	Website:
+		http://www.cuijiahua.com/
+	Modify:
+		2017-11-20
+	"""
+	xTx = xMat.T * xMat
+	denom = xTx + np.eye(np.shape(xMat)[1]) * lam
+	if np.linalg.det(denom) == 0.0:
+		print("矩阵为奇异矩阵,不能转置")
+		return
+	ws = denom.I * (xMat.T * yMat)
+	return ws
+
 def setDataCollect(retX, retY):
 	"""
 	函数说明:依次读取六种乐高套装的数据，并生成数据矩阵
@@ -144,8 +165,21 @@ def standRegres(xArr,yArr):
 	return ws
 
 def crossValidation(xArr, yArr, numVal = 10):
+	"""
+	函数说明:交叉验证岭回归
+	Parameters:
+		xArr - x数据集
+		yArr - y数据集
+		numVal - 交叉验证次数
+	Returns:
+		wMat - 回归系数矩阵
+	Website:
+		http://www.cuijiahua.com/
+	Modify:
+		2017-11-20
+	"""
 	m = len(yArr)																		#统计样本个数                       
-	indexList = range(m)																#生成索引值列表
+	indexList = list(range(m))															#生成索引值列表
 	errorMat = np.zeros((numVal,30))													#create error mat 30columns numVal rows
 	for i in range(numVal):																#交叉验证numVal次
 		trainX = []; trainY = []														#训练集
@@ -164,18 +198,16 @@ def crossValidation(xArr, yArr, numVal = 10):
 			meanTrain = np.mean(matTrainX,0)											#测试集均值
 			varTrain = np.var(matTrainX,0)												#测试集方差
 			matTestX = (matTestX - meanTrain) / varTrain 								#测试集标准化
-			yEst = matTestX * np.mat(wMat[k,:]).T + np.mean(trainY)
-			errorMat[i,k] = rssError(yEst.T.A, array(testY))
-			#print errorMat[i,k]
-	meanErrors = np.mean(errorMat,0)
-	minMean = float(min(meanErrors))
-	bestWeights = wMat[np.nonzero(meanErrors == minMean)]
+			yEst = matTestX * np.mat(wMat[k,:]).T + np.mean(trainY)						#根据ws预测y值
+			errorMat[i, k] = rssError(yEst.T.A, np.array(testY))							#统计误差
+	meanErrors = np.mean(errorMat,0)													#计算每次交叉验证的平均误差
+	minMean = float(min(meanErrors))													#找到最小误差
+	bestWeights = wMat[np.nonzero(meanErrors == minMean)]								#找到最佳回归系数
 
 	xMat = np.mat(xArr); yMat = np.mat(yArr).T
 	meanX = np.mean(xMat,0); varX = np.var(xMat,0)
-	unReg = bestWeights/varX
-	print("the best model from Ridge Regression is:\n",unReg)
-	print("with constant term: ",-1 * sum(multiply(meanX,unReg)) + mean(yMat))
+	unReg = bestWeights / varX															#数据经过标准化，因此需要还原
+	print('%f%+f*年份%+f*部件数量%+f*是否为全新%+f*原价' % ((-1 * np.sum(np.multiply(meanX,unReg)) + np.mean(yMat)), unReg[0,0], unReg[0,1], unReg[0,2], unReg[0,3]))	
 
 def ridgeTest(xArr, yArr):
 	"""
@@ -204,8 +236,6 @@ def ridgeTest(xArr, yArr):
 		wMat[i, :] = ws.T 								#计算回归系数矩阵
 	return wMat
 
-
-
 def useStandRegres():
 	"""
 	函数说明:使用简单的线性回归
@@ -225,7 +255,27 @@ def useStandRegres():
 	lgX1 = np.mat(np.ones((data_num, features_num + 1)))
 	lgX1[:, 1:5] = np.mat(lgX)
 	ws = standRegres(lgX1, lgY)
-	print('%f%f*年份%f*部件数量%f*是否为全新%f*原价' % (ws[0],ws[1],ws[2],ws[3],ws[4]))	
+	print('%f%+f*年份%+f*部件数量%+f*是否为全新%+f*原价' % (ws[0],ws[1],ws[2],ws[3],ws[4]))	
+
+def usesklearn():
+	"""
+	函数说明:使用sklearn
+	Parameters:
+		无
+	Returns:
+		无
+	Website:
+		http://www.cuijiahua.com/
+	Modify:
+		2017-12-08
+	"""
+	from sklearn import linear_model
+	reg = linear_model.Ridge(alpha = .5)
+	lgX = []
+	lgY = []
+	setDataCollect(lgX, lgY)
+	reg.fit(lgX, lgY) 
+	print('%f%+f*年份%+f*部件数量%+f*是否为全新%+f*原价' % (reg.intercept_, reg.coef_[0], reg.coef_[1], reg.coef_[2], reg.coef_[3]))	
 
 if __name__ == '__main__':
-	useStandRegres()
+	usesklearn()
