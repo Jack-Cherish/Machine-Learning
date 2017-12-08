@@ -117,9 +117,17 @@
 |   文章   |  个人网站  |    CSDN    |    知乎    |
 | :------  | :--------: | :--------: | :--------: |
 | Python3《机器学习实战》学习笔记（十一）：线性回归基础篇之预测鲍鱼年龄 | [个人网站](http://www.cuijiahua.com/blog/2017/11/ml_11_regression_1.html "悬停显示") | no | no |
+| Python3《机器学习实战》学习笔记（十二）：线性回归提高篇之乐高玩具套件二手价预测 | [个人网站](http://cuijiahua.com/blog/2017/12/ml_12_regression_2.html "悬停显示") | no | no |
 
 ### 代码
 
 * [1.线性回归(普通线性回归+局部加权线性回归)](https://github.com/Jack-Cherish/Machine-Learning/blob/master/Regression/regression_old.py "悬停显示")
 
 * [2.预测鲍鱼年龄](https://github.com/Jack-Cherish/Machine-Learning/blob/master/Regression/abalone.py "悬停显示")
+
+* [3.逐步线性回归](https://github.com/Jack-Cherish/Machine-Learning/blob/master/Regression/regression.py "悬停显示")
+
+* [4.乐高玩具二手价格预测](https://github.com/Jack-Cherish/Machine-Learning/blob/master/Regression/lego.py "悬停显示")
+
+
+
