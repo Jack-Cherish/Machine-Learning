@@ -51,7 +51,7 @@ def lwlr(testPoint, xArr, yArr, k = 1.0):
 		weights[j, j] = np.exp(diffMat * diffMat.T/(-2.0 * k**2))
 	xTx = xMat.T * (weights * xMat)										
 	if np.linalg.det(xTx) == 0.0:
-		print("矩阵为奇异矩阵,不能转置")
+		print("矩阵为奇异矩阵,不能求逆")
 		return
 	ws = xTx.I * (xMat.T * (weights * yMat))							#计算回归系数
 	return testPoint * ws
@@ -93,7 +93,7 @@ def standRegres(xArr,yArr):
 	xMat = np.mat(xArr); yMat = np.mat(yArr).T
 	xTx = xMat.T * xMat							#根据文中推导的公示计算回归系数
 	if np.linalg.det(xTx) == 0.0:
-		print("矩阵为奇异矩阵,不能转置")
+		print("矩阵为奇异矩阵,不能求逆")
 		return
 	ws = xTx.I * (xMat.T*yMat)
 	return ws
