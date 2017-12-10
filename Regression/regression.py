@@ -45,7 +45,7 @@ def ridgeRegres(xMat, yMat, lam = 0.2):
 	xTx = xMat.T * xMat
 	denom = xTx + np.eye(np.shape(xMat)[1]) * lam
 	if np.linalg.det(denom) == 0.0:
-		print("矩阵为奇异矩阵,不能转置")
+		print("矩阵为奇异矩阵,不能求逆")
 		return
 	ws = denom.I * (xMat.T * yMat)
 	return ws
