@@ -1,4 +1,5 @@
 #-*- coding:utf-8 -*-
+import matplotlib.pyplot as plt
 import numpy as np
 
 def loadDataSet(fileName):
@@ -20,6 +21,30 @@ def loadDataSet(fileName):
 		fltLine = list(map(float, curLine))					#转化为float类型
 		dataMat.append(fltLine)
 	return dataMat
+
+def plotDataSet(filename):
+	"""
+	函数说明:绘制数据集
+	Parameters:
+		filename - 文件名
+	Returns:
+		无
+	Website:
+		http://www.cuijiahua.com/
+	Modify:
+		2017-11-12
+	"""
+	dataMat = loadDataSet(filename)										#加载数据集
+	n = len(dataMat)													#数据个数
+	xcord = []; ycord = []												#样本点
+	for i in range(n):													
+		xcord.append(dataMat[i][0]); ycord.append(dataMat[i][1])		#样本点
+	fig = plt.figure()
+	ax = fig.add_subplot(111)											#添加subplot
+	ax.scatter(xcord, ycord, s = 20, c = 'blue',alpha = .5)				#绘制样本点
+	plt.title('DataSet')												#绘制title
+	plt.xlabel('X')
+	plt.show()
 
 def binSplitDataSet(dataSet, feature, value):
 	"""
@@ -145,34 +170,91 @@ def createTree(dataSet, leafType = regLeaf, errType = regErr, ops = (1, 4)):
 	retTree = {}
 	retTree['spInd'] = feat
 	retTree['spVal'] = val
+	#分成左数据集和右数据集
 	lSet, rSet = binSplitDataSet(dataSet, feat, val)
+	#创建左子树和右子树
 	retTree['left'] = createTree(lSet, leafType, errType, ops)
 	retTree['right'] = createTree(rSet, leafType, errType, ops)
 	return retTree  
 
-# def linearSolve(dataSet):   #helper function used in two places
-# 	m,n = shape(dataSet)
-# 	X = mat(ones((m,n))); Y = mat(ones((m,1)))#create a copy of data with 1 in 0th postion
-# 	X[:,1:n] = dataSet[:,0:n-1]; Y = dataSet[:,-1]#and strip out Y
-# 	xTx = X.T*X
-# 	if linalg.det(xTx) == 0.0:
-# 		raise NameError('This matrix is singular, cannot do inverse,\n\
-# 		try increasing the second value of ops')
-# 	ws = xTx.I * (X.T * Y)
-# 	return ws,X,Y
+def isTree(obj):
+	"""
+	函数说明:判断测试输入变量是否是一棵树
+	Parameters:
+	    obj - 测试对象
+	Returns:
+		是否是一棵树
+	Website:
+	    http://www.cuijiahua.com/
+	Modify:
+	    2017-12-14
+	"""
+	import types
+	return (type(obj).__name__ == 'dict')
 
-# def modelLeaf(dataSet):#create linear model and return coeficients
-# 	ws,X,Y = linearSolve(dataSet)
-# 	return ws
+def getMean(tree):
+	"""
+	函数说明:对树进行塌陷处理(即返回树平均值)
+	Parameters:
+	    tree - 树
+	Returns:
+		树的平均值
+	Website:
+	    http://www.cuijiahua.com/
+	Modify:
+	    2017-12-14
+	"""
+	if isTree(tree['right']): tree['right'] = getMean(tree['right'])
+	if isTree(tree['left']): tree['left'] = getMean(tree['left'])
+	return (tree['left'] + tree['right']) / 2.0
 
-# def modelErr(dataSet):
-# 	ws,X,Y = linearSolve(dataSet)
-# 	yHat = X * ws
-# 	return sum(power(Y - yHat,2))
+def prune(tree, testData):
+	"""
+	函数说明:后剪枝
+	Parameters:
+	    tree - 树
+	    test - 测试集
+	Returns:
+		树的平均值
+	Website:
+	    http://www.cuijiahua.com/
+	Modify:
+	    2017-12-14
+	"""
+	#如果测试集为空,则对树进行塌陷处理
+	if np.shape(testData)[0] == 0: return getMean(tree)
+	#如果有左子树或者右子树,则切分数据集
+	if (isTree(tree['right']) or isTree(tree['left'])):
+		lSet, rSet = binSplitDataSet(testData, tree['spInd'], tree['spVal'])
+	#处理左子树(剪枝)
+	if isTree(tree['left']): tree['left'] = prune(tree['left'], lSet)
+	#处理右子树(剪枝)
+	if isTree(tree['right']): tree['right'] =  prune(tree['right'], rSet)
+	#如果当前结点的左右结点为叶结点
+	if not isTree(tree['left']) and not isTree(tree['right']):
+		lSet, rSet = binSplitDataSet(testData, tree['spInd'], tree['spVal'])
+		#计算没有合并的误差
+		errorNoMerge = np.sum(np.power(lSet[:,-1] - tree['left'],2)) + np.sum(np.power(rSet[:,-1] - tree['right'],2))
+		#计算合并的均值
+		treeMean = (tree['left'] + tree['right']) / 2.0
+		#计算合并的误差
+		errorMerge = np.sum(np.power(testData[:,-1] - treeMean, 2))
+		#如果合并的误差小于没有合并的误差,则合并
+		if errorMerge < errorNoMerge: 
+			# print("merging")
+			return treeMean
+		else: return tree
+	else: return tree
 
 if __name__ == '__main__':
-	myDat = loadDataSet('ex00.txt')
-	myMat = np.mat(myDat)
-	feat, val = chooseBestSplit(myMat, regLeaf, regErr, (1, 4))
-	print(feat)
-	print(val)
+	print('剪枝前:')
+	train_filename = 'ex2.txt'
+	train_Data = loadDataSet(train_filename)
+	train_Mat = np.mat(train_Data)
+	tree = createTree(train_Mat)
+	print(tree)
+	print('\n剪枝后:')
+	test_filename = 'ex2test.txt'
+	test_Data = loadDataSet(test_filename)
+	test_Mat = np.mat(test_Data)
+	print(prune(tree, test_Mat))
