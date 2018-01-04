@@ -129,7 +129,7 @@
 
 * [4.乐高玩具二手价格预测](https://github.com/Jack-Cherish/Machine-Learning/blob/master/Regression/lego.py "悬停显示")
 
-## 第九章：Regression
+## 第九章：Regression Tree
 
 |   文章   |  个人网站  |    CSDN    |    知乎    |
 | :------  | :--------: | :--------: | :--------: |
