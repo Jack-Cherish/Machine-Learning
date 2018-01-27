@@ -261,7 +261,7 @@ def showClassifer(dataMat, classLabels, w, b):
 	plt.plot([x1, x2], [y1, y2])
 	#找出支持向量点
 	for i, alpha in enumerate(alphas):
-		if abs(alpha) > 0:
+		if alpha > 0:
 			x, y = dataMat[i]
 			plt.scatter([x], [y], s=150, c='none', alpha=0.7, linewidth=1.5, edgecolor='red')
 	plt.show()
