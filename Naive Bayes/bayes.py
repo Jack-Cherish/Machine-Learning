@@ -78,8 +78,8 @@ Parameters:
 	trainMatrix - 训练文档矩阵，即setOfWords2Vec返回的returnVec构成的矩阵
 	trainCategory - 训练类别标签向量，即loadDataSet返回的classVec
 Returns:
-	p0Vect - 侮辱类的条件概率数组
-	p1Vect - 非侮辱类的条件概率数组
+	p0Vect - 非的条件概率数组
+	p1Vect - 侮辱类的条件概率数组
 	pAbusive - 文档属于侮辱类的概率
 Author:
 	Jack Cui
@@ -110,8 +110,8 @@ def trainNB0(trainMatrix,trainCategory):
 
 Parameters:
 	vec2Classify - 待分类的词条数组
-	p0Vec - 侮辱类的条件概率数组
-	p1Vec -非侮辱类的条件概率数组
+	p0Vec - 非侮辱类的条件概率数组
+	p1Vec -侮辱类的条件概率数组
 	pClass1 - 文档属于侮辱类的概率
 Returns:
 	0 - 属于非侮辱类
