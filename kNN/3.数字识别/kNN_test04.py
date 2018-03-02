@@ -62,7 +62,7 @@ def handwritingClassTest():
 		trainingMat[i,:] = img2vector('trainingDigits/%s' % (fileNameStr))
 	#构建kNN分类器
 	neigh = kNN(n_neighbors = 3, algorithm = 'auto')
-	#拟合模型, trainingMat为测试矩阵,hwLabels为对应的标签
+	#拟合模型, trainingMat为训练矩阵,hwLabels为对应的标签
 	neigh.fit(trainingMat, hwLabels)
 	#返回testDigits目录下的文件列表
 	testFileList = listdir('testDigits')
