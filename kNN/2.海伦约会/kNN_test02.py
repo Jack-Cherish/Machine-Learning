@@ -65,10 +65,12 @@ Modify:
 	2017-03-24
 """
 def file2matrix(filename):
-	#打开文件
-	fr = open(filename)
+	#打开文件,此次应指定编码，
+    fr = open(filename,'r',encoding = 'utf-8')
 	#读取文件所有内容
 	arrayOLines = fr.readlines()
+	#针对有BOM的UTF-8文本，应该去掉BOM，否则后面会引发错误。
+    arrayOLines[0]=arrayOLines[0].lstrip('\ufeff')
 	#得到文件行数
 	numberOfLines = len(arrayOLines)
 	#返回的NumPy矩阵,解析完成的数据:numberOfLines行,3列
