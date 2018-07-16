@@ -25,7 +25,7 @@ def calcShannonEnt(dataSet):
 	for featVec in dataSet:							#对每组特征向量进行统计
 		currentLabel = featVec[-1]					#提取标签(Label)信息
 		if currentLabel not in labelCounts.keys():	#如果标签(Label)没有放入统计次数的字典,添加进去
-			labelCounts[currentLabel] = 0
+			labelCounts[currentLabel] = 1
 		labelCounts[currentLabel] += 1				#Label计数
 	shannonEnt = 0.0								#经验熵(香农熵)
 	for key in labelCounts:							#计算香农熵
