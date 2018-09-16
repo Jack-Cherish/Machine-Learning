@@ -1,6 +1,7 @@
 # Machine-Learning
+* [中文（简体）](https://github.com/Jack-Cherish/Machine-Learning/blob/master/README.md "悬停显示")<br>
+
 * Rome was not built in a day<br>
-* [中文（简体）](https://github.com/Jack-Cherish/Machine-Learning/README.md "悬停显示")<br>
 
 * [Blog](http://blog.csdn.net/c406495762 "悬停显示")<br>
 
