@@ -15,10 +15,6 @@
 
 * My Website: http://cuijiahua.com/
 
-* Follow Me on WeChat Official Accounts:
-
-	<img border="0" src="https://github.com/Jack-Cherish/Pictures/blob/master/gzh.jpg" alt="ML" title="ML"></a>
-	
 ### Article Debut
 
 *  Debut articles on my website and forward on orther platforms, click here to get the latest development: http://cuijiahua.com/
