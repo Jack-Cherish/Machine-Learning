@@ -170,7 +170,7 @@ def createTree(dataSet, labels, featLabels):
 	classList = [example[-1] for example in dataSet]			#取分类标签(是否放贷:yes or no)
 	if classList.count(classList[0]) == len(classList):			#如果类别完全相同则停止继续划分
 		return classList[0]
-	if len(dataSet[0]) == 1:									#遍历完所有特征时返回出现次数最多的类标签
+	if len(dataSet[0]) == 1 or len(labels) == 0:									#遍历完所有特征时返回出现次数最多的类标签
 		return majorityCnt(classList)
 	bestFeat = chooseBestFeatureToSplit(dataSet)				#选择最优特征
 	bestFeatLabel = labels[bestFeat]							#最优特征的标签
