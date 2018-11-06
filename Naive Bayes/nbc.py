@@ -1,4 +1,5 @@
 # -*- coding: UTF-8 -*-
+from collections import defaultdict
 from sklearn.naive_bayes import MultinomialNB
 import matplotlib.pyplot as plt
 import os
@@ -22,6 +23,10 @@ Author:
 Blog:
 	http://blog.csdn.net/c406495762
 Modify:
+    2017-11-15 by Cugtyt 
+		* GitHub(https://github.com/Cugtyt) 
+		* Email(cugtyt@qq.com)
+		Use enumerate and defaultdict to make code more readable.
 	2017-08-22
 """
 def TextProcessing(folder_path, test_size = 0.2):
@@ -34,9 +39,8 @@ def TextProcessing(folder_path, test_size = 0.2):
 		new_folder_path = os.path.join(folder_path, folder)		#根据子文件夹，生成新的路径
 		files = os.listdir(new_folder_path)						#存放子文件夹下的txt文件的列表
 		
-		j = 1
 		#遍历每个txt文件
-		for file in files:
+		for j, file in enumerate(files):
 			if j > 100:											#每类txt样本数最多100个
 				break
 			with open(os.path.join(new_folder_path, file), 'r', encoding = 'utf-8') as f:	#打开txt文件
@@ -47,7 +51,6 @@ def TextProcessing(folder_path, test_size = 0.2):
 			
 			data_list.append(word_list)							#添加数据集数据
 			class_list.append(folder)							#添加数据集类别
-			j += 1
 
 	data_class_list = list(zip(data_list, class_list))			#zip压缩合并，将数据与标签对应压缩
 	random.shuffle(data_class_list)								#将data_class_list乱序
@@ -57,14 +60,11 @@ def TextProcessing(folder_path, test_size = 0.2):
 	train_data_list, train_class_list = zip(*train_list)		#训练集解压缩
 	test_data_list, test_class_list = zip(*test_list)			#测试集解压缩
 
-	all_words_dict = {}											#统计训练集词频
+	all_words_dict = defaultdict(int)  # 统计训练集词频
 	for word_list in train_data_list:
 		for word in word_list:
-			if word in all_words_dict.keys():
-				all_words_dict[word] += 1
-			else:
-				all_words_dict[word] = 1
-	
+			all_words_dict[word] += 1
+
 	#根据键的值倒序排序
 	all_words_tuple_list = sorted(all_words_dict.items(), key = lambda f:f[1], reverse = True)
 	all_words_list, all_words_nums = zip(*all_words_tuple_list)	#解压缩
@@ -135,18 +135,20 @@ Author:
 Blog:
 	http://blog.csdn.net/c406495762
 Modify:
+    2017-11-15 by Cugtyt 
+		* GitHub(https://github.com/Cugtyt) 
+		* Email(cugtyt@qq.com)
+		Use enumerate to simplify iteration.
 	2017-08-22
 """
 def words_dict(all_words_list, deleteN, stopwords_set = set()):
 	feature_words = []							#特征列表
-	n = 1
-	for t in range(deleteN, len(all_words_list), 1):
+	for n, t in enumerate(range(deleteN, len(all_words_list), 1)):
 		if n > 1000:							#feature_words的维度为1000
 			break								
 		#如果这个词不是数字，并且不是指定的结束语，并且单词长度大于1小于5，那么这个词就可以作为特征词
 		if not all_words_list[t].isdigit() and all_words_list[t] not in stopwords_set and 1 < len(all_words_list[t]) < 5:
 			feature_words.append(all_words_list[t])
-		n += 1
 	return feature_words
 
 """
