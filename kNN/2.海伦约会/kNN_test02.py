@@ -66,35 +66,38 @@ Modify:
 """
 def file2matrix(filename):
 	#打开文件,此次应指定编码，
-    	fr = open(filename,'r',encoding = 'utf-8')
+    
+    fr = open(filename,'r',encoding = 'utf-8')
 	#读取文件所有内容
-	arrayOLines = fr.readlines()
-	#针对有BOM的UTF-8文本，应该去掉BOM，否则后面会引发错误。
-    	arrayOLines[0]=arrayOLines[0].lstrip('\ufeff')
+    arrayOLines = fr.readlines()
+    #针对有BOM的UTF-8文本，应该去掉BOM，否则后面会引发错误。
+    arrayOLines[0]=arrayOLines[0].lstrip('\ufeff')
 	#得到文件行数
-	numberOfLines = len(arrayOLines)
+    numberOfLines = len(arrayOLines)
 	#返回的NumPy矩阵,解析完成的数据:numberOfLines行,3列
-	returnMat = np.zeros((numberOfLines,3))
+    returnMat = np.zeros((numberOfLines,3))
 	#返回的分类标签向量
-	classLabelVector = []
+    classLabelVector = []
 	#行的索引值
-	index = 0
-	for line in arrayOLines:
+    index = 0
+
+    for line in arrayOLines:
 		#s.strip(rm)，当rm空时,默认删除空白符(包括'\n','\r','\t',' ')
-		line = line.strip()
+        line = line.strip()
 		#使用s.split(str="",num=string,cout(str))将字符串根据'\t'分隔符进行切片。
-		listFromLine = line.split('\t')
+        listFromLine = line.split('\t')
 		#将数据前三列提取出来,存放到returnMat的NumPy矩阵中,也就是特征矩阵
-		returnMat[index,:] = listFromLine[0:3]
-		#根据文本中标记的喜欢的程度进行分类,1代表不喜欢,2代表魅力一般,3代表极具魅力
-		if listFromLine[-1] == 'didntLike':
-			classLabelVector.append(1)
-		elif listFromLine[-1] == 'smallDoses':
-			classLabelVector.append(2)
-		elif listFromLine[-1] == 'largeDoses':
-			classLabelVector.append(3)
-		index += 1
-	return returnMat, classLabelVector
+        returnMat[index,:] = listFromLine[0:3]
+		#根据文本中标记的喜欢的程度进行分类,1代表不喜欢,2代表魅力一般,3代表极具魅力   
+		# 对于datingTestSet2.txt  最后的标签是已经经过处理的 标签已经改为了1, 2, 3
+        if listFromLine[-1] == 'didntLike':
+            classLabelVector.append(1)
+        elif listFromLine[-1] == 'smallDoses':
+            classLabelVector.append(2)
+        elif listFromLine[-1] == 'largeDoses':
+            classLabelVector.append(3)
+        index += 1
+    return returnMat, classLabelVector
 
 """
 函数说明:可视化数据
@@ -109,7 +112,7 @@ Modify:
 """
 def showdatas(datingDataMat, datingLabels):
 	#设置汉字格式
-	font = FontProperties(fname=r"c:\windows\fonts\simsun.ttc", size=14)
+	font = FontProperties(fname=r"c:\windows\fonts\simsunb.ttf", size=14)  ##需要查看自己的电脑是否会包含该字体
 	#将fig画布分隔成1行1列,不共享x轴和y轴,fig画布的大小为(13,8)
 	#当nrow=2,nclos=2时,代表fig画布被分为四个区域,axs[0][0]表示第一行第一个区域
 	fig, axs = plt.subplots(nrows=2, ncols=2,sharex=False, sharey=False, figsize=(13,8))
@@ -200,13 +203,12 @@ def autoNorm(dataSet):
 
 """
 函数说明:分类器测试函数
+取百分之十的数据作为测试数据，检测分类器的正确性
 
 Parameters:
 	无
 Returns:
-	normDataSet - 归一化后的特征矩阵
-	ranges - 数据范围
-	minVals - 数据最小值
+	无
 
 Modify:
 	2017-03-24
