@@ -179,8 +179,10 @@ def createTree(dataSet, labels, featLabels):
 	del(labels[bestFeat])										#删除已经使用特征标签
 	featValues = [example[bestFeat] for example in dataSet]		#得到训练集中所有最优特征的属性值
 	uniqueVals = set(featValues)								#去掉重复的属性值
-	for value in uniqueVals:									#遍历特征，创建决策树。						
-		myTree[bestFeatLabel][value] = createTree(splitDataSet(dataSet, bestFeat, value), labels, featLabels)
+	for value in uniqueVals:									#遍历特征，创建决策树。
+		subLabels = labels[:]
+		myTree[bestFeatLabel][value] = createTree(splitDataSet(dataSet, bestFeat, value), subLabels, featLabels)
+        
 	return myTree
 
 """
@@ -251,7 +253,7 @@ Modify:
 """
 def plotNode(nodeTxt, centerPt, parentPt, nodeType):
 	arrow_args = dict(arrowstyle="<-")											#定义箭头格式
-	font = FontProperties(fname=r"c:\windows\fonts\simsun.ttc", size=14)		#设置中文字体
+	font = FontProperties(fname=r"c:\windows\fonts\simsunb.ttf", size=14)		#设置中文字体
 	createPlot.ax1.annotate(nodeTxt, xy=parentPt,  xycoords='axes fraction',	#绘制结点
 		xytext=centerPt, textcoords='axes fraction',
 		va="center", ha="center", bbox=nodeType, arrowprops=arrow_args, FontProperties=font)
@@ -406,6 +408,7 @@ if __name__ == '__main__':
 	dataSet, labels = createDataSet()
 	featLabels = []
 	myTree = createTree(dataSet, labels, featLabels)
+	createPlot(myTree)
 	testVec = [0,1]										#测试数据
 	result = classify(myTree, featLabels, testVec)
 	if result == 'yes':
