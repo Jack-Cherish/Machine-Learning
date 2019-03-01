@@ -3,17 +3,17 @@
 
 * 贵有恒，何必三更起五更睡；最无益，只怕一日暴十寒。<br>
 
-* [我的博客](http://blog.csdn.net/c406495762 "悬停显示")<br>
+* 我的个人网站，欢迎关注：http://cuijiahua.com/
 
-* 机器学习实战（详细代码注释+训练数据集），持续更新中！<br>
+* [我的博客](http://blog.csdn.net/c406495762 "CSDN")<br>
 
-* 欢迎关注我的[[CSDN博客专栏](http://blog.csdn.net/column/details/16415.html "悬停显示")]<br>
+* 机器学习实战（详细代码注释+训练数据集）。<br>
 
-* 欢迎关注我的[[知乎专栏](https://zhuanlan.zhihu.com/ml-jack "悬停显示")]<br>
+* 欢迎关注我的[[CSDN博客专栏](http://blog.csdn.net/column/details/16415.html "CSDN专栏")]<br>
+
+* 欢迎关注我的[[知乎专栏](https://zhuanlan.zhihu.com/ml-jack "知乎专栏")]<br>
 
 * 学习交流群【328127489】<a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=e70f3fcff3761450fda9b43eadc1910dac308a962ef9e3e87941cd2c681c4bb4"><img border="0" src="https://github.com/Jack-Cherish/Pictures/blob/master/qqgroup.png" alt="Coder" title="Coder"></a><br>
-
-* 我的个人网站，欢迎关注：http://cuijiahua.com/
 	
 ### 文章首发声明
 
