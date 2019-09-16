@@ -9,7 +9,7 @@
 
 * 机器学习实战（详细代码注释+训练数据集）。<br>
 
-* 欢迎关注我的[[CSDN博客专栏](http://blog.csdn.net/column/details/16415.html "CSDN专栏")]<br>
+* 欢迎关注我的[[CSDN博客专栏](https://blog.csdn.net/c406495762/article/category/9269492 "CSDN专栏")]<br>
 
 * 欢迎关注我的[[知乎专栏](https://zhuanlan.zhihu.com/ml-jack "知乎专栏")]<br>
 
