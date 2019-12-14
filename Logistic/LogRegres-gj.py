@@ -114,9 +114,9 @@ def stocGradAscent1(dataMatrix, classLabels, numIter=150):
 		for i in range(m):			
 			alpha = 4/(1.0+j+i)+0.01   	 									#降低alpha的大小，每次减小1/(j+i)。
 			randIndex = int(random.uniform(0,len(dataIndex)))				#随机选取样本
-			h = sigmoid(sum(dataMatrix[randIndex]*weights))					#选择随机选取的一个样本，计算h
-			error = classLabels[randIndex] - h 								#计算误差
-			weights = weights + alpha * error * dataMatrix[randIndex]   	#更新回归系数
+			h = sigmoid(sum(dataMatrix[dataIndex[randIndex]]*weights))		#选择随机选取的一个样本，计算h
+			error = classLabels[dataIndex[randIndex]] - h 								#计算误差
+			weights = weights + alpha * error * dataMatrix[dataIndex[randIndex]]   	#更新回归系数
 			weights_array = np.append(weights_array,weights,axis=0) 		#添加回归系数到数组中
 			del(dataIndex[randIndex]) 										#删除已经使用的样本
 	weights_array = weights_array.reshape(numIter*m,n) 						#改变维度
