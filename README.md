@@ -1,7 +1,7 @@
 # Machine-Learning
 * [In English](https://github.com/Jack-Cherish/Machine-Learning/blob/master/README-eng.md "悬停显示")<br>
 
-* 贵有恒，何必三更起五更睡；最无益，只怕一日暴十寒。<br>
+* 贵有恒，何必三更起五更睡；最无益，只怕一日曝十日寒。<br>
 
 * 我的个人网站，欢迎关注：http://cuijiahua.com/
 
