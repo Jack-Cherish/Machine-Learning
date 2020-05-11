@@ -3,22 +3,20 @@
 
 * 贵有恒，何必三更起五更睡；最无益，只怕一日曝十日寒。<br>
 
-* 我的个人网站，欢迎关注：http://cuijiahua.com/
-
-* [我的博客](http://blog.csdn.net/c406495762 "CSDN")<br>
-
 * 机器学习实战（详细代码注释+训练数据集）。<br>
 
-* 欢迎关注我的[[CSDN博客专栏](https://blog.csdn.net/c406495762/article/category/9269492 "CSDN专栏")]<br>
+* [个人网站](https://cuijiahua.com/ "个人网站")<br>
 
-* 欢迎关注我的[[知乎专栏](https://zhuanlan.zhihu.com/ml-jack "知乎专栏")]<br>
+* [CSDN](http://blog.csdn.net/c406495762 "CSDN")<br>
 
-* 学习交流群【328127489】<a target="_blank" href="//shang.qq.com/wpa/qunwpa?idkey=e70f3fcff3761450fda9b43eadc1910dac308a962ef9e3e87941cd2c681c4bb4"><img border="0" src="https://github.com/Jack-Cherish/Pictures/blob/master/qqgroup.png" alt="Coder" title="Coder"></a><br>
+* [知乎](https://www.zhihu.com/people/Jack--Cui/activities "知乎")<br>
+
+* 学习交流群：关注公众号，回复交流群，拉你进群！<br>
 
 * 公众号：[JackCui-AI](https://mp.weixin.qq.com/s/OCWwRVDFNslIuKyiCVUoTA "JackCui-AI")<br>
 
-* 分享技术，乐享生活：Jack Cui公众号推送“程序员欢乐送”系列资讯类文章，以及技术类文章，欢迎您的关注！
-<div align="center"><img border="0" src="https://ww2.sinaimg.cn/large/0072Lfvtly1fxuhd2t2jqj309k09kglk.jpg" alt="Coder" title="gongzhonghao" with="200" height="200"></div>
+* 分享技术，乐享生活：Jack Cui公众号推送技术类文章，涉及深度学习、网络爬虫、Python基础等，欢迎您的关注！
+<div align="center"><img border="0" src="https://cuijiahua.com/wp-content/uploads/2019/04/gzh-1.jpg" alt="Coder" title="gongzhonghao" with="200" height="200"></div>
 	
 ### 文章首发声明
 
