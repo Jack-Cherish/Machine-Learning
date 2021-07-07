@@ -15,7 +15,7 @@
 	
 ### 文章首发声明
 
-* 文章在自己的个人网站首发，其他平台文章均属转发，如想获得最新更新进展，欢迎关注我的个人网站：http://cuijiahua.com/
+* 文章在自己的公众号和个人网站首发，其他平台文章均属转发，如想获得最新更新进展，欢迎关注我的个人网站：http://cuijiahua.com/
 
 ## 第二章：kNN（k-邻域算法）
 
@@ -135,6 +135,12 @@
 ### 代码
 
 * [1.树回归](https://github.com/Jack-Cherish/Machine-Learning/blob/master/Regression%20Trees/regTrees.py "悬停显示")
+
+## 聚类
+
+|   文章   |  个人网站  |    公众号    |
+| :------  | :--------: | :--------: |
+| 嘿，来聚个类！| [个人网站](https://cuijiahua.com/blog/2021/04/ml-14.html) | [公众号](https://mp.weixin.qq.com/s/oxB5icj8KOfFja8XTHf7jg) |
 
 更多精彩，敬请期待！
 
