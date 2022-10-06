@@ -153,6 +153,7 @@ def plotROC(predStrengths, classLabels):
 	print('AUC面积为:', ySum * xStep) 										#计算AUC
 	plt.show()
 	
+	
 
 if __name__ == '__main__':
 	dataArr, LabelArr = loadDataSet('horseColicTraining2.txt')
