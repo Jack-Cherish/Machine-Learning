@@ -28,6 +28,7 @@ def loadDataSet(fileName):
 
 	return dataMat, labelMat
 
+
 if __name__ == '__main__':
 	dataArr, classLabels = loadDataSet('horseColicTraining2.txt')
 	testArr, testLabelArr = loadDataSet('horseColicTest2.txt')
