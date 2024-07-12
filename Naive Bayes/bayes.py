@@ -97,10 +97,10 @@ def trainNB0(trainMatrix,trainCategory):
 	for i in range(numTrainDocs):
 		if trainCategory[i] == 1:							#统计属于侮辱类的条件概率所需的数据，即P(w0|1),P(w1|1),P(w2|1)···
 			p1Num += trainMatrix[i]
-			p1Denom += sum(trainMatrix[i])                  ## 该词条的总的词数目   这压样求得每个词条出现的概率 P(w1),P(w2), P(w3)...
+			p1Denom += 1                 					## 该词条的总的词数目   这压样求得每个词条出现的概率 P(w1),P(w2), P(w3)...
 		else:												#统计属于非侮辱类的条件概率所需的数据，即P(w0|0),P(w1|0),P(w2|0)···
 			p0Num += trainMatrix[i]
-			p0Denom += sum(trainMatrix[i])
+			p0Denom += 1
 	p1Vect = p1Num/p1Denom									#相除        
 	p0Vect = p0Num/p0Denom          
 	return p0Vect,p1Vect,pAbusive							#返回属于侮辱类的条件概率数组，属于非侮辱类的条件概率数组，文档属于侮辱类的概率
