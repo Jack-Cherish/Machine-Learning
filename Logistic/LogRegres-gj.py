@@ -228,3 +228,4 @@ if __name__ == '__main__':
 
 	weights2,weights_array2 = gradAscent(dataMat, labelMat)
 	plotWeights(weights_array1, weights_array2)
+	Console.WriteLine ("my name is ehsan")
